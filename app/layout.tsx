@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ahmed abd Elmohsen | Software Engineer",
+  title: "Ahmed Abd Elmohsen | Software Engineer",
   description: "Professional portfolio showcasing my work as a Software Engineer with expertise in frontend and backend technologies.",
   keywords: ["web developer", "software engineer", "react", "next.js", "portfolio"],
-  authors: [{ name: "Ahmed abd Elmohsen" }],
-  creator: "Ahmed abd Elmohsen",
+  authors: [{ name: "Ahmed Abd Elmohsen" }],
+  creator: "Ahmed Abd Elmohsen",
 };
 
 export default function RootLayout({

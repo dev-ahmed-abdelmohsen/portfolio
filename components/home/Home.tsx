@@ -29,7 +29,7 @@ export default function Home() {
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
             <span className="block">Hello, I'm</span>
-            <span className="block text-teal-400">Ahmed abd Elmohsen</span>
+            <span className="block text-teal-400">Ahmed Abd Elmohsen</span>
           </h1>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-light mb-8">
             Software Engineer
@@ -71,7 +71,7 @@ export default function Home() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h3 className="text-2xl font-bold mb-4">I'm <span className="text-teal-600">Ahmed abd Elmohsen</span>, a Software Engineer</h3>
+              <h3 className="text-2xl font-bold mb-4">I'm <span className="text-teal-600">Ahmed Abd Elmohsen</span>, a Software Engineer</h3>
               <p className="text-gray-600 mb-6">
                 With over X years of experience in web development, I specialize in building robust and scalable applications 
                 that provide exceptional user experiences. My passion lies in solving complex problems with clean, efficient code.
@@ -91,7 +91,7 @@ export default function Home() {
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-teal-600 bg-gray-200">
                 <Image 
                   src="/profile.svg" 
-                  alt="Ahmed abd Elmohsen" 
+                  alt="Ahmed Abd Elmohsen" 
                   fill
                   className="object-contain p-4"
                   sizes="(max-width: 768px) 16rem, 20rem"
@@ -170,7 +170,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Email</h4>
-                    <p className="text-teal-600">ahmed.abd.elmohsen@gmail.com</p>
+                    <p className="text-teal-600">ahmed.Abd.elmohsen@gmail.com</p>
                   </div>
                 </div>
                 
@@ -220,21 +220,21 @@ export default function Home() {
               <form className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Ahmed abd Elmohsen</label>
+                    <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Ahmed Abd Elmohsen</label>
                     <input 
                       type="text" 
                       id="name" 
                       className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent"
-                      placeholder="Ahmed abd Elmohsen"
+                      placeholder="Ahmed Abd Elmohsen"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-gray-700 font-medium mb-2">ahmed.abd.elmohsen@gmail.com</label>
+                    <label htmlFor="email" className="block text-gray-700 font-medium mb-2">ahmed.Abd.elmohsen@gmail.com</label>
                     <input 
                       type="email" 
                       id="email" 
                       className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent"
-                      placeholder="ahmed.abd.elmohsen@gmail.com"
+                      placeholder="ahmed.Abd.elmohsen@gmail.com"
                     />
                   </div>
                 </div>

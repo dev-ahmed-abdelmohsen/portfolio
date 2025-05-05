@@ -44,7 +44,7 @@ export default function Navbar() {
             className={`text-2xl font-bold ${scrolled ? 'text-gray-900 dark:text-white' : 'text-white'}`}
           >
             <span className="text-teal-600">{'<'}</span>
-            Ahmed abd Elmohsen
+            Ahmed Abd Elmohsen
             <span className="text-teal-600">{'/>'}</span>
           </Link>
 

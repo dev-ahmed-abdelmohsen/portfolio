@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-xl font-bold mb-4">Ahmed abd Elmohsen</h3>
+            <h3 className="text-xl font-bold mb-4">Ahmed Abd Elmohsen</h3>
             <p className="text-gray-400 mb-4 max-w-md">
               A passionate Software Engineer specialized in building exceptional digital experiences that are fast, accessible, and responsive.
             </p>
@@ -54,7 +54,7 @@ export default function Footer() {
             <h4 className="text-lg font-medium mb-4">Connect With Me</h4>
             <div className="flex space-x-4">
               <a 
-                href="https://github.com/ahmedabd" 
+                href="https://github.com/ahmedAbd" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-teal-400 transition"
@@ -65,7 +65,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a 
-                href="https://linkedin.com/in/ahmedabd" 
+                href="https://linkedin.com/in/ahmedAbd" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-teal-400 transition"
@@ -76,7 +76,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a 
-                href="https://twitter.com/ahmedabd" 
+                href="https://twitter.com/ahmedAbd" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-teal-400 transition"
@@ -92,7 +92,7 @@ export default function Footer() {
         
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Ahmed abd Elmohsen. All rights reserved.
+            © {currentYear} Ahmed Abd Elmohsen. All rights reserved.
           </p>
           
           <div className="mt-4 md:mt-0">
