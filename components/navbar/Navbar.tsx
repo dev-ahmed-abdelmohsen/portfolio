@@ -43,9 +43,9 @@ export default function Navbar() {
             href="#" 
             className={`text-2xl font-bold ${scrolled ? 'text-gray-900 dark:text-white' : 'text-white'}`}
           >
-            <span className="text-blue-600">{'<'}</span>
+            <span className="text-teal-600">{'<'}</span>
             Ahmed Adb Elmohsen
-            <span className="text-blue-600">{'/>'}</span>
+            <span className="text-teal-600">{'/>'}</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -56,7 +56,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`font-medium transition-colors ${
                   scrolled 
-                    ? 'text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400' 
+                    ? 'text-gray-700 hover:text-teal-600 dark:text-gray-300 dark:hover:text-teal-400' 
                     : 'text-gray-200 hover:text-white'
                 }`}
               >
@@ -69,7 +69,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className={`px-4 py-2 rounded-full font-medium transition-colors ${
                 scrolled
-                  ? 'bg-blue-600 text-white hover:bg-blue-700'
+                  ? 'bg-teal-600 text-white hover:bg-teal-700'
                   : 'bg-white text-gray-900 hover:bg-gray-100'
               }`}
             >
@@ -116,7 +116,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-gray-800"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-teal-400 dark:hover:bg-gray-800"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
@@ -126,7 +126,7 @@ export default function Navbar() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="block px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
+            className="block px-3 py-2 rounded-md text-base font-medium text-white bg-teal-600 hover:bg-teal-700"
             onClick={() => setIsOpen(false)}
           >
             Resume

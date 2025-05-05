@@ -1,0 +1,17 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="300" fill="#f8fafc" />
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="150" r="120" fill="#f1f5f9" />
+  <circle cx="150" cy="150" r="90" fill="#e2e8f0" />
+  
+  <!-- Avatar Elements -->
+  <circle cx="150" cy="110" r="60" fill="#0d9488" />
+  <path d="M150,180 C194,180 230,210 230,260 L70,260 C70,210 106,180 150,180 Z" fill="#0d9488" />
+  
+  <!-- Facial Features (Simple) -->
+  <circle cx="130" cy="100" r="6" fill="#fff" />
+  <circle cx="170" cy="100" r="6" fill="#fff" />
+  <path d="M130,130 Q150,145 170,130" stroke="#fff" stroke-width="3" fill="none" />
+</svg> 

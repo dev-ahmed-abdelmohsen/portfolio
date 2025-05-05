@@ -17,7 +17,7 @@ const projects: Project[] = [
     id: 1,
     title: "E-Commerce Platform",
     description: "Full-stack e-commerce solution with payment integration, inventory management, and user authentication.",
-    image: "/projects/ecommerce.jpg",
+    image: "/project1.svg",
     tags: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
     link: "https://github.com/yourusername/ecommerce-project"
   },
@@ -25,7 +25,7 @@ const projects: Project[] = [
     id: 2,
     title: "Task Management App",
     description: "Collaborative task management tool with real-time updates and team workspaces.",
-    image: "/projects/task-app.jpg",
+    image: "/project2.svg",
     tags: ["TypeScript", "Next.js", "PostgreSQL", "Prisma", "WebSockets"],
     link: "https://github.com/yourusername/task-management"
   },
@@ -33,7 +33,7 @@ const projects: Project[] = [
     id: 3,
     title: "Portfolio Website",
     description: "Professional portfolio website showcasing projects and skills with modern design.",
-    image: "/projects/portfolio.jpg",
+    image: "/project3.svg",
     tags: ["React", "TypeScript", "Next.js", "TailwindCSS"],
     link: "https://github.com/yourusername/portfolio"
   },
@@ -105,22 +105,25 @@ export default function ProjectSlider() {
               index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >
-            <div className="relative w-full h-full">
-              <Image 
-                src={project.image} 
-                alt={project.title}
-                fill
-                className="object-cover brightness-[0.7]"
-                priority={index === 0}
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 sm:p-8 text-white">
+            <div className="relative w-full h-full flex flex-col justify-center items-center bg-gradient-to-b from-gray-800 to-gray-900">
+              <div className="w-full h-3/5 relative flex justify-center items-center">
+                <Image 
+                  src={project.image} 
+                  alt={project.title}
+                  width={280}
+                  height={280}
+                  className="w-auto h-auto max-h-[280px] max-w-[80%] object-contain"
+                  priority={index === 0}
+                />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6 sm:p-8 text-white">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-2">{project.title}</h2>
                 <p className="mb-4 text-sm sm:text-base">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span 
                       key={tag} 
-                      className="px-2 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs"
+                      className="px-2 py-1 bg-teal-600/70 backdrop-blur-sm rounded-full text-xs"
                     >
                       {tag}
                     </span>
@@ -131,7 +134,7 @@ export default function ProjectSlider() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block px-4 py-2 bg-white text-black font-medium rounded-full hover:bg-opacity-90 transition"
+                    className="inline-block px-4 py-2 bg-teal-600 text-white font-medium rounded-full hover:bg-teal-700 transition"
                   >
                     View Project
                   </a>
@@ -144,7 +147,7 @@ export default function ProjectSlider() {
 
       <button 
         onClick={prevSlide}
-        className="absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-black/30 text-white hover:bg-black/50 transition"
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-teal-900/70 text-white hover:bg-teal-900/90 transition"
         aria-label="Previous project"
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
@@ -154,7 +157,7 @@ export default function ProjectSlider() {
       
       <button 
         onClick={nextSlide}
-        className="absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-black/30 text-white hover:bg-black/50 transition"
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-teal-900/70 text-white hover:bg-teal-900/90 transition"
         aria-label="Next project"
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
@@ -169,8 +172,8 @@ export default function ProjectSlider() {
             onClick={() => setCurrentIndex(index)}
             className={`w-2 h-2 rounded-full transition-all ${
               index === currentIndex 
-                ? "bg-white w-4" 
-                : "bg-white/50 hover:bg-white/70"
+                ? "bg-teal-400 w-4" 
+                : "bg-white/50 hover:bg-teal-400/70"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

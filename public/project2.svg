@@ -1,0 +1,27 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#1e293b" />
+  
+  <!-- Task Management Icon -->
+  <circle cx="200" cy="200" r="140" fill="#4338ca" />
+  <circle cx="200" cy="200" r="120" fill="#3730a3" />
+  
+  <!-- Task List Background -->
+  <rect x="100" y="120" width="200" height="160" rx="15" ry="15" fill="#818cf8" />
+  
+  <!-- Task Items -->
+  <rect x="120" y="150" width="160" height="20" rx="5" ry="5" fill="#e0e7ff" />
+  <rect x="120" y="180" width="160" height="20" rx="5" ry="5" fill="#e0e7ff" />
+  <rect x="120" y="210" width="160" height="20" rx="5" ry="5" fill="#e0e7ff" />
+  <rect x="120" y="240" width="160" height="20" rx="5" ry="5" fill="#e0e7ff" />
+  
+  <!-- Checkmarks -->
+  <path d="M135,150 L135,170" stroke="#4f46e5" stroke-width="2" />
+  <path d="M130,160 L140,160" stroke="#4f46e5" stroke-width="2" />
+  
+  <path d="M135,180 L135,200" stroke="#4f46e5" stroke-width="2" />
+  <path d="M130,190 L140,190" stroke="#4f46e5" stroke-width="2" />
+  
+  <circle cx="135" cy="220" r="5" fill="#4f46e5" />
+  <circle cx="135" cy="250" r="5" fill="#4f46e5" />
+</svg> 
