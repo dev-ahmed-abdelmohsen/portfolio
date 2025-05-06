@@ -54,7 +54,7 @@ export default function Footer() {
             <h4 className="text-lg font-medium mb-4">Connect With Me</h4>
             <div className="flex space-x-4">
               <a 
-                href="https://github.com/ahmedAbd" 
+                href="https://github.com/ahmed-838" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-teal-400 transition"
@@ -65,7 +65,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a 
-                href="https://linkedin.com/in/ahmedAbd" 
+                href="https://www.linkedin.com/in/ahmed-838-shams/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-teal-400 transition"
@@ -76,14 +76,14 @@ export default function Footer() {
                 </svg>
               </a>
               <a 
-                href="https://twitter.com/ahmedAbd" 
+                href="https://wa.me/01224900205" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-teal-400 transition"
-                aria-label="Twitter Profile"
+                aria-label="WhatsApp Profile"
               >
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07a4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                  <path fillRule="evenodd" d="M20.105 3.896C17.932 1.723 14.931 0.5 11.762 0.5c-6.53 0-11.85 5.32-11.85 11.85 0 2.085 0.547 4.116 1.588 5.914L0.5 24l5.882-1.543c1.732 0.943 3.683 1.443 5.673 1.443h0.005c6.528 0 11.848-5.32 11.848-11.85 0-3.169-1.223-6.17-3.396-8.343zM11.762 21.726h-0.004c-1.77 0-3.502-0.476-5.013-1.373l-0.36-0.213-3.726 0.977 0.995-3.636-0.234-0.373c-0.988-1.57-1.509-3.384-1.509-5.258 0-5.431 4.42-9.85 9.855-9.85 2.634 0 5.108 1.026 6.97 2.888 1.862 1.862 2.887 4.336 2.887 6.97 0 5.432-4.418 9.85-9.85 9.85zm5.407-7.372c-0.297-0.148-1.754-0.866-2.027-0.964-0.272-0.099-0.47-0.148-0.669 0.148-0.198 0.297-0.767 0.964-0.941 1.162-0.173 0.198-0.347 0.223-0.644 0.074-0.297-0.148-1.255-0.462-2.39-1.475-0.884-0.788-1.48-1.761-1.653-2.059-0.173-0.297-0.018-0.458 0.13-0.606 0.134-0.133 0.297-0.347 0.446-0.521 0.148-0.173 0.198-0.297 0.297-0.495 0.099-0.198 0.05-0.372-0.025-0.521-0.074-0.148-0.669-1.612-0.916-2.207-0.242-0.579-0.487-0.501-0.669-0.51-0.173-0.008-0.371-0.01-0.57-0.01-0.198 0-0.52 0.074-0.792 0.372-0.272 0.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074 0.148 0.198 2.095 3.2 5.076 4.487 0.709 0.306 1.263 0.489 1.694 0.626 0.712 0.226 1.36 0.194 1.872 0.118 0.571-0.085 1.758-0.719 2.006-1.413 0.248-0.694 0.248-1.29 0.173-1.413-0.074-0.124-0.272-0.198-0.57-0.347z" clipRule="evenodd"/>
                 </svg>
               </a>
             </div>
@@ -95,20 +95,6 @@ export default function Footer() {
             © {currentYear} Ahmed Abd Elmohsen. All rights reserved.
           </p>
           
-          <div className="mt-4 md:mt-0">
-            <ul className="flex space-x-6 text-sm text-gray-400">
-              <li>
-                <Link href="/privacy" className="hover:text-teal-400 transition">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="hover:text-teal-400 transition">
-                  Terms of Service
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </footer>
