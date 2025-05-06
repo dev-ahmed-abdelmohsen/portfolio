@@ -28,7 +28,7 @@ const projects: Project[] = [
     description: "Real State Website with a modern design and a responsive layout.",
     image: "/projects/mawa1.png",
     tags: ["TypeScript", "Next.js", "TailwindCSS", "MongoDB", "Node.js"],
-    link: "https://mawa-rho.vercel.app/"
+    link: "https://mawa-rho.vercel.app/map/"
   },
   {
     id: 3,
