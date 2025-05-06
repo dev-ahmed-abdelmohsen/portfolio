@@ -30,15 +30,23 @@ const projects: Project[] = [
     tags: ["TypeScript", "Next.js", "TailwindCSS", "MongoDB", "Node.js"],
     link: "https://mawa-rho.vercel.app/map/"
   },
-  {
-    id: 3,
-    title: "E-Commerce Website",
-    description: "E-Commerce Website with a modern design and a responsive layout.",
-    image: "/projects/viewstore.png",
-    tags: ["React", "TypeScript", "Next.js", "TailwindCSS"],
-    link: "https://viewstore.vercel.app/"
-  },
-];
+    {
+      id: 3,
+      title: "Real State Subsite For Owners",
+      description: "Real State Subsite For Owners with a modern design and a responsive layout.",
+      image: "/projects/mawa-owners.png",
+      tags: ["React", "TypeScript", "Next.js", "TailwindCSS"],
+      link: "https://mawa-owners.vercel.app/dashboard"
+    },
+    // {
+    //   id: 4,
+    //   title: "E-Commerce Website",
+    //   description: "E-Commerce Website with a modern design and a responsive layout.",
+    //   image: "/projects/viewstore.png",
+    //   tags: ["React", "TypeScript", "Next.js", "TailwindCSS"],
+    //   link: "https://viewstore.vercel.app/"
+    // },
+  ];
 
 export default function ProjectSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
