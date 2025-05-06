@@ -6,13 +6,15 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-pdf": "node utils/generate-pdf.js"
   },
   "dependencies": {
     "critters": "^0.0.23",
     "framer-motion": "^12.9.7",
     "my_portfolio": "file:",
     "next": "15.3.1",
+    "puppeteer": "^24.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

@@ -63,10 +63,8 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/resume"
               className={`px-4 py-2 rounded-full font-medium transition-colors ${
                 scrolled
                   ? 'bg-teal-600 text-white hover:bg-teal-700'
@@ -74,7 +72,7 @@ export default function Navbar() {
               }`}
             >
               Resume
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -122,15 +120,13 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/resume"
             className="block px-3 py-2 rounded-md text-base font-medium text-white bg-teal-600 hover:bg-teal-700"
             onClick={() => setIsOpen(false)}
           >
             Resume
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
