@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from 'react';
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { motion, useInView, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import ProjectSlider from './slider';
 import Image from 'next/image';
 
@@ -47,9 +47,10 @@ const stats = [
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
   const { scrollY } = useScroll();
-  const y1 = useTransform(scrollY, [0, 300], [0, 100]);
-  const y2 = useTransform(scrollY, [0, 300], [0, -100]);
+  const y1 = useTransform(scrollY, [0, 300], [0, shouldReduceMotion ? 0 : 100]);
+  const y2 = useTransform(scrollY, [0, 300], [0, shouldReduceMotion ? 0 : -100]);
   
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
@@ -65,24 +66,38 @@ export default function Home() {
     setIsVisible(true);
   }, []);
 
+  // Optimized animation variants with reduced complexity
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
+        staggerChildren: shouldReduceMotion ? 0 : 0.1,
+        delayChildren: shouldReduceMotion ? 0 : 0.05,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: shouldReduceMotion ? 0.1 : 0.4,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  // Simplified hero animation variants for better performance
+  const heroVariants = {
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: shouldReduceMotion ? 0.1 : 0.6,
         ease: "easeOut",
       },
     },
@@ -90,31 +105,34 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Enhanced Hero Section */}
+      {/* Optimized Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white overflow-hidden">
-        {/* Animated background elements */}
-        <motion.div 
-          style={{ y: y1 }}
-          className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-teal-400/20 to-blue-500/20 rounded-full blur-3xl"
-        />
-        <motion.div 
-          style={{ y: y2 }}
-          className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-400/20 to-pink-500/20 rounded-full blur-3xl"
-        />
+        {/* Simplified background elements - only render if motion is allowed */}
+        {!shouldReduceMotion && (
+          <>
+            <motion.div 
+              style={{ y: y1 }}
+              className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-teal-400/20 to-blue-500/20 rounded-full blur-3xl"
+            />
+            <motion.div 
+              style={{ y: y2 }}
+              className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-400/20 to-pink-500/20 rounded-full blur-3xl"
+            />
+          </>
+        )}
         
-        {/* Grid pattern overlay */}
+        {/* Simplified grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
 
         <motion.div 
           className="flex flex-col items-center text-center z-10 px-4 max-w-5xl mx-auto"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          variants={heroVariants}
+          initial="hidden"
+          animate={isVisible ? "visible" : "hidden"}
         >
+          {/* Optimized avatar section */}
           <motion.div
-            initial={{ scale: 0.5, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            variants={heroVariants}
             className="mb-8"
           >
             <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-teal-400 to-blue-500 p-1 mb-6">
@@ -124,11 +142,10 @@ export default function Home() {
             </div>
           </motion.div>
 
+          {/* Optimized title */}
           <motion.h1 
             className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            variants={heroVariants}
           >
             <span className="block">Hello, I'm</span>
             <span className="block bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
@@ -136,81 +153,49 @@ export default function Home() {
             </span>
           </motion.h1>
 
+          {/* Simplified subtitle */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            variants={heroVariants}
             className="mb-8"
           >
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light mb-4 text-gray-300">
               Software Engineer
             </h2>
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium border border-white/20">
-                Backend Developer
-              </span>
-              <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium border border-white/20">
-                DevOps Engineer
-              </span>
-              <span className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium border border-white/20">
-                Problem Solver
-              </span>
+              {['Backend Developer', 'DevOps Engineer', 'Problem Solver'].map((tag) => (
+                <span key={tag} className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium border border-white/20">
+                  {tag}
+                </span>
+              ))}
             </div>
           </motion.div>
 
+          {/* Optimized description with critical CSS classes for LCP */}
           <motion.p 
-            className="max-w-3xl text-gray-300 mb-12 text-lg sm:text-xl leading-relaxed"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            className="max-w-3xl text-gray-300 mb-12 text-lg sm:text-xl leading-relaxed hero-text"
+            variants={heroVariants}
+            style={{ willChange: shouldReduceMotion ? 'auto' : 'transform, opacity' }}
           >
             I build robust, scalable, and efficient applications using cutting-edge technologies. 
             Specializing in backend development and cloud infrastructure.
           </motion.p>
+        </motion.div>
 
-          {/* <motion.div 
-            className="flex flex-col sm:flex-row gap-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
+        {/* Simplified scroll indicator */}
+        {!shouldReduceMotion && (
+          <motion.div 
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           >
-            <motion.a 
-              href="#projects" 
-              className="group px-8 py-4 bg-gradient-to-r from-teal-500 to-blue-600 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/25 transform hover:scale-105"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span className="flex items-center justify-center">
-                View My Work
-                <svg className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </span>
-            </motion.a>
-            <motion.a 
-              href="#contact" 
-              className="px-8 py-4 bg-transparent border-2 border-white/30 hover:border-white/60 rounded-full font-semibold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get In Touch
-            </motion.a>
-          </motion.div> */}
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/60 rounded-full mt-2"></div>
-          </div>
-        </motion.div>
+            <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-white/60 rounded-full mt-2"></div>
+            </div>
+          </motion.div>
+        )}
       </section>
 
-      {/* Stats Section */}
+      {/* Optimized Stats Section */}
       <motion.section 
         ref={statsRef}
         className="py-20 bg-slate-900 text-white relative overflow-hidden"
@@ -228,6 +213,7 @@ export default function Home() {
                 key={stat.label}
                 variants={itemVariants}
                 className="text-center group"
+                style={{ willChange: shouldReduceMotion ? 'auto' : 'transform' }}
               >
                 <div className="text-4xl mb-2">{stat.icon}</div>
                 <div className="text-3xl lg:text-4xl font-bold text-teal-400 mb-2 group-hover:scale-110 transition-transform">
@@ -240,7 +226,7 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Enhanced About Section */}
+      {/* Optimized About Section */}
       <section ref={aboutRef} className="py-24 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-white"></div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -255,15 +241,17 @@ export default function Home() {
           </motion.div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Image Section - Shows first on mobile, second on desktop */}
+            {/* Optimized Image Section */}
             <motion.div 
               className="flex justify-center lg:justify-end order-1 lg:order-2"
-              initial={{ opacity: 0, x: 50 }}
-              animate={isAboutInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0, x: shouldReduceMotion ? 0 : 50 }}
+              animate={isAboutInView ? { opacity: 1, x: 0 } : { opacity: 0, x: shouldReduceMotion ? 0 : 50 }}
+              transition={{ duration: shouldReduceMotion ? 0.1 : 0.6, delay: shouldReduceMotion ? 0 : 0.2 }}
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full blur-2xl opacity-20 scale-110"></div>
+                {!shouldReduceMotion && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full blur-2xl opacity-20 scale-110"></div>
+                )}
                 <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-gradient-to-r from-teal-400 to-blue-500 bg-white shadow-2xl">
                   <Image 
                     src="/profile_3.jpeg" 
@@ -273,25 +261,27 @@ export default function Home() {
                     sizes="(max-width: 640px) 16rem, (max-width: 768px) 20rem, 20rem"
                     priority
                     style={{
-                      objectPosition: 'center 20%', // تركيز على الوجه وتجنب النص
+                      objectPosition: 'center 20%',
                     }}
                   />
-                  {/* Overlay gradient لتحسين المظهر */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-transparent hover:from-teal-900/10 transition-all duration-500"></div>
                 </div>
                 
-                {/* Decorative elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-teal-400 rounded-full opacity-70 animate-pulse"></div>
-                <div className="absolute -bottom-6 -left-4 w-6 h-6 bg-blue-500 rounded-full opacity-60 animate-pulse delay-700"></div>
+                {/* Simplified decorative elements */}
+                {!shouldReduceMotion && (
+                  <>
+                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-teal-400 rounded-full opacity-70 animate-pulse"></div>
+                    <div className="absolute -bottom-6 -left-4 w-6 h-6 bg-blue-500 rounded-full opacity-60 animate-pulse delay-700"></div>
+                  </>
+                )}
               </div>
             </motion.div>
 
-            {/* Text Content - Shows second on mobile, first on desktop */}
+            {/* Optimized Text Content */}
             <motion.div
               className="order-2 lg:order-1"
-              initial={{ opacity: 0, x: -50 }}
-              animate={isAboutInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, x: shouldReduceMotion ? 0 : -50 }}
+              animate={isAboutInView ? { opacity: 1, x: 0 } : { opacity: 0, x: shouldReduceMotion ? 0 : -50 }}
+              transition={{ duration: shouldReduceMotion ? 0.1 : 0.6, delay: shouldReduceMotion ? 0 : 0.1 }}
             >
               <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-center lg:text-left">
                 I'm <span className="bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">Ahmed Abd Elmohsen</span>, 
