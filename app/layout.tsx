@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -73,15 +74,36 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="preload" href="/profile_3.jpeg" as="image" />
       </head>
       <body className="font-inter antialiased">
         {children}
+        <Script
+          id="font-display-swap"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              document.fonts.ready.then(() => {
+                document.documentElement.classList.add('fonts-loaded');
+              });
+            `,
+          }}
+        />
       </body>
     </html>
   );

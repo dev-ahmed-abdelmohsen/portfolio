@@ -40,7 +40,16 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Custom scrollbar */
+/* Font loading optimization */
+html:not(.fonts-loaded) body {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.fonts-loaded body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Optimized scrollbar - better browser support */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -64,24 +73,7 @@ body {
   }
 }
 
-/* For Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary) #f1f1f1;
-}
-
-@media (prefers-color-scheme: dark) {
-  * {
-    scrollbar-color: var(--primary) #1a1a1a;
-  }
-}
-
-/* إضافة styles للـ build optimization */
-.next-error-h1 {
-  border-right: 1px solid rgba(255, 255, 255, .3);
-}
-
-/* تحسين الأداء */
+/* Performance optimizations */
 * {
   box-sizing: border-box;
 }
@@ -91,7 +83,18 @@ img {
   height: auto;
 }
 
-/* تحسين التحميل */
+/* Reduce motion for accessibility and performance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Loading optimization */
 .loading {
   animation: spin 1s linear infinite;
 }
@@ -99,4 +102,9 @@ img {
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+/* Critical CSS for LCP optimization */
+.hero-text {
+  font-display: swap;
 }
