@@ -13,7 +13,8 @@
     "build:clean": "rimraf .next && next build",
     "build:force": "rimraf .next && npm run build",
     "build:safe": "if exist .next rmdir /s /q .next && npm run build",
-    "fix-permissions": "icacls .next /grant Everyone:F /T || echo 'Permissions updated'"
+    "fix-permissions": "icacls .next /grant Everyone:F /T || echo 'Permissions updated'",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "critters": "^0.0.23",
