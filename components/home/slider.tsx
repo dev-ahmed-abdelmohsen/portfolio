@@ -186,7 +186,7 @@ export default function ProjectSlider() {
                           isImageLoading ? 'scale-110 blur-sm opacity-0' : 'scale-100 blur-0 opacity-100'
                         }`}
                         priority={currentIndex === 0}
-                        onLoadingComplete={() => setIsImageLoading(false)}
+                        onLoad={() => setIsImageLoading(false)}
                       />
                       
                       {/* Overlay gradient */}

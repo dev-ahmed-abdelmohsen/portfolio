@@ -75,3 +75,28 @@ body {
     scrollbar-color: var(--primary) #1a1a1a;
   }
 }
+
+/* إضافة styles للـ build optimization */
+.next-error-h1 {
+  border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
+/* تحسين الأداء */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* تحسين التحميل */
+.loading {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

@@ -4,10 +4,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ahmed-abd-elmohsen.vercel.app';
   
   // قائمة الصفحات الثابتة في موقعك
-  const routes = ['', '/projects', '/about', '/contact', '/resume'].map((route) => ({
+  const routes = ['', '/resume'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: 'weekly',
+    changeFrequency: 'weekly' as const,
     priority: route === '' ? 1 : 0.8,
   }));
   
@@ -28,9 +28,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ].map((project) => ({
     url: `${baseUrl}/projects/${project.slug}`,
     lastModified: project.lastModified,
-    changeFrequency: 'monthly',
+    changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));
   
-  return [...routes, ...projects] as MetadataRoute.Sitemap;
+  return [...routes, ...projects];
 }

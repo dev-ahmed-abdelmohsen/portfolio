@@ -1,8 +1,35 @@
 import type { Metadata, Viewport } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Resume - Ahmed Abd Elmohsen',
-  description: 'Professional resume of Ahmed Abd Elmohsen - Software Engineer',
+  title: 'Professional Resume - Ahmed Abd Elmohsen',
+  description:
+    'Professional resume of Ahmed Abd Elmohsen - Software Engineer specializing in backend development and DevOps practices. ATS-optimized and ready for applications.',
+  keywords: [
+    'resume',
+    'CV',
+    'Software Engineer',
+    'Backend Developer',
+    'DevOps',
+    'Ahmed Abd Elmohsen',
+  ],
+  openGraph: {
+    title: 'Professional Resume - Ahmed Abd Elmohsen',
+    description:
+      'Professional resume of Ahmed Abd Elmohsen - Software Engineer specializing in backend development and DevOps practices.',
+    url: 'https://ahmed-abd-elmohsen.vercel.app/resume',
+  },
+  twitter: {
+    title: 'Professional Resume - Ahmed Abd Elmohsen',
+    description:
+      'Professional resume of Ahmed Abd Elmohsen - Software Engineer specializing in backend development and DevOps practices.',
+  },
+  alternates: {
+    canonical: 'https://ahmed-abd-elmohsen.vercel.app/resume',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export const viewport: Viewport = {

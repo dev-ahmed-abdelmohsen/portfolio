@@ -2,29 +2,66 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ahmed Abd Elmohsen - Portfolio",
+  metadataBase: new URL("https://ahmed-abd-elmohsen.vercel.app"),
+  title: {
+    default: "Ahmed Abd Elmohsen - Portfolio",
+    template: "%s | Ahmed Abd Elmohsen",
+  },
   description: "Software Engineer specializing in backend development and DevOps practices",
-  keywords: ["Software Engineer", "Backend Developer", "DevOps", "Node.js", "React", "Next.js"],
-  authors: [{ name: "Ahmed Abd Elmohsen" }],
+  keywords: ["Software Engineer", "Backend Developer", "DevOps", "Node.js", "React", "Next.js", "Ahmed Abd Elmohsen"],
+  authors: [{ name: "Ahmed Abd Elmohsen", url: "https://ahmed-abd-elmohsen.vercel.app" }],
   creator: "Ahmed Abd Elmohsen",
+  publisher: "Ahmed Abd Elmohsen",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://ahmed-abd-elmohsen.vercel.app",
     title: "Ahmed Abd Elmohsen - Portfolio",
     description: "Software Engineer specializing in backend development and DevOps practices",
-    url: "https://ahmed-abd-elmohsen.vercel.app",
     siteName: "Ahmed Abd Elmohsen Portfolio",
-    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ahmed Abd Elmohsen - Software Engineer Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ahmed Abd Elmohsen - Portfolio",
     description: "Software Engineer specializing in backend development and DevOps practices",
+    images: ["/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://ahmed-abd-elmohsen.vercel.app",
+  },
+  verification: {
+    google: "your-google-verification-code", // Add your actual verification code
   },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
 };
 
 export default function RootLayout({
@@ -39,6 +76,9 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
       </head>
       <body className="font-inter antialiased">
         {children}
