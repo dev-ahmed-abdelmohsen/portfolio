@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "dev:clean": "rimraf .next && next dev",
-    "build": "node scripts/build.js",
+    "build": "next build",
+    "build:analyze": "ANALYZE=true next build",
     "start": "next start",
     "lint": "next lint",
     "clean": "rimraf .next out",
@@ -32,5 +33,13 @@
     "rimraf": "^6.0.1",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not ie <= 11",
+    "not safari <= 10",
+    "not chrome <= 60",
+    "not firefox <= 60",
+    "> 1%"
+  ]
 }
