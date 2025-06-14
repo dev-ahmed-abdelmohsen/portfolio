@@ -8,8 +8,8 @@ export default function Home() {
     <main>
       <SchemaOrg 
         url="https://ahmedabdelmohsen.com"
-        title="Ahmed Adb Elmohsen | Software Engineer"
-        description="Professional portfolio showcasing my work as a Software Engineer with expertise in frontend and backend technologies."
+        title="Ahmed Abd Elmohsen | Software Engineer"
+        description="Professional portfolio showcasing my work as a Software Engineer with expertise in backend development and DevOps practices."
       />
       <Navbar />
       <HomeComponent />

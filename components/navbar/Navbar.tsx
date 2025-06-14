@@ -64,7 +64,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/resume"
+              href="/ats-resume.html"
               className={`px-4 py-2 rounded-full font-medium transition-colors ${
                 scrolled
                   ? 'bg-teal-600 text-white hover:bg-teal-700'
@@ -121,7 +121,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/resume"
+            href="/ats-resume.html"
             className="block px-3 py-2 rounded-md text-base font-medium text-white bg-teal-600 hover:bg-teal-700"
             onClick={() => setIsOpen(false)}
           >

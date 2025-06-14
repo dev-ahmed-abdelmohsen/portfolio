@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Abd Elmohsen - Software Engineer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            font-size: 11pt;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #2c5aa0;
+            padding-bottom: 15px;
+        }
+        
+        .header h1 {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #2c5aa0;
+            margin-bottom: 5px;
+        }
+        
+        .header .title {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            font-size: 10pt;
+            color: #666;
+        }
+        
+        .section {
+            margin-bottom: 18px;
+        }
+        
+        .section-title {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #2c5aa0;
+            border-bottom: 1px solid #2c5aa0;
+            margin-bottom: 8px;
+            padding-bottom: 2px;
+            text-transform: uppercase;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            font-size: 12pt;
+            color: #333;
+        }
+        
+        .company-info {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            font-size: 11pt;
+            color: #333;
+            margin-bottom: 2px;
+        }
+        
+        .tech-stack {
+            font-style: italic;
+            color: #666;
+            font-size: 10pt;
+            margin-bottom: 5px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        li {
+            margin-bottom: 3px;
+            text-align: justify;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .skill-category {
+            margin-bottom: 8px;
+        }
+        
+        .skill-category strong {
+            color: #2c5aa0;
+        }
+        
+        .education-item {
+            margin-bottom: 10px;
+        }
+        
+        .degree {
+            font-weight: bold;
+            font-size: 12pt;
+        }
+        
+        .school {
+            font-style: italic;
+            color: #666;
+        }
+        
+        .cert-item {
+            margin-bottom: 5px;
+        }
+        
+        @media print {
+            body {
+                padding: 0.3in;
+                font-size: 10pt;
+            }
+            
+            .header h1 {
+                font-size: 20pt;
+            }
+            
+            .section-title {
+                font-size: 12pt;
+            }
+            
+            .download-btn {
+                display: none !important;
+            }
+        }
+        
+        /* Download button styles */
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #2c5aa0;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(44, 90, 160, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .download-btn:hover {
+            background: #1e3a8a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(44, 90, 160, 0.4);
+        }
+        
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+    </style>
+    <script>
+        function downloadCompressedPDF() {
+            console.log('Print button clicked. Opening print dialog.');
+            
+            // Since no PDF file exists, use browser's print function
+            // This allows users to save as PDF from their browser
+            window.print();
+        }
+    </script>
+</head>
+<body>
+    <!-- Download Button -->
+    <button class="download-btn" onclick="downloadCompressedPDF()">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H9.5a2 2 0 01-2-2v-4a2 2 0 012-2H16" />
+        </svg>
+        Print/Save as PDF
+    </button>
+
+    <div class="header">
+        <h1>Ahmed Abd Elmohsen</h1>
+        <div class="title">Software Engineer | Backend Developer | DevOps Engineer</div>
+        <div class="contact-info">
+            Email: ashams3719262@gmail.com | Location: Cairo, Egypt<br>
+            LinkedIn: linkedin.com/in/ahmed-838-shams | GitHub: github.com/ahmed-838<br>
+            Portfolio: ahmed-abd-elmohsen.vercel.app
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p>Results-driven Software Engineer with 3+ years of experience developing scalable web applications and cloud-based solutions. Expertise in full-stack development using modern JavaScript frameworks, AWS cloud services. Proven track record of delivering high-performance applications that serve thousands of users. Strong background in API design, database optimization, and DevOps practices.</p>
+    </div>    <div class="section">
+        <h2 class="section-title">Core Technical Skills</h2>
+        <div class="skills-grid">
+            <div>
+                <div class="skill-category"><strong>Backend:</strong> Node.js, Express, Java, Python, Flask</div>
+                <div class="skill-category"><strong>Database:</strong> MongoDB,  MS SQL Server, MySQL</div>
+            </div>
+            <div>
+                <div class="skill-category"><strong>DevOps:</strong> Docker, AWS (EC2, S3), CI/CD, Ansible, Terraform, Linux, Nginx</div>
+                <div class="skill-category"><strong>Frontend:</strong> React.js, Next.js, TypeScript, JavaScript</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="job-title">Software Engineer | Freelance & Contract Work</div>
+        <div class="company-info">Cairo, Egypt | 2024 - Present</div>
+        <ul>
+            <li>Architected and deployed 15+ scalable web applications on AWS using EC2, S3 and vercel  serving over 100+ monthly active users</li>
+            <li>Designed and implemented comprehensive backend services with Node.js and Express, reducing API response times </li>
+            <li>Built RESTful APIs with advanced authentication, rate limiting, and data validation </li>
+            <li>Applied SOLID principles and design patterns to develop maintainable applications, reducing bug reports </li>
+            <li>Implemented CI/CD pipelines using GitHub Actions, decreasing deployment time from 2 hours to 15 minutes</li>
+            <li>Developed responsive web applications using React and Next.js with TypeScript</li>
+            <li>Optimized database performance with indexing and caching strategies</li>
+            
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Key Projects</h2>
+        
+        <div class="project-title">GenCare Mobile Application - Pregnancy Care System</div>
+        <div class="tech-stack">Technologies: React Native, Expo, Node.js, AI/ML Integration, JWT Authentication</div>
+        <ul>
+            <li>Led development team building comprehensive pregnancy care mobile app with AI-based diagnostics</li>
+            <li>Architected full-stack React Native application with secure JWT authentication and offline synchronization</li>
+            <li>Integrated AI-powered ultrasound image analysis for early detection of fetal abnormalities</li>
+            <li>Implemented health monitoring interfaces and notification systems for pregnancy tracking</li>
+        </ul>
+        
+        <div class="project-title">Mawa - Multi-Platform Student Housing Management System</div>
+        <div class="tech-stack">Technologies: Next.js, TypeScript, Node.js, MongoDB, Leaflet Maps, JWT, React Query</div>
+        <ul>
+            <li>Architected comprehensive multi-tiered housing platform with separate interfaces for admins, property owners, and students</li>
+            <li>Developed location-based property search system using Leaflet maps with advanced filtering capabilities</li>
+            <li>Implemented secure property approval workflow with document upload system and owner verification process</li>
+            <li>Built RTL-optimized interfaces with Arabic language support and gender-specific accommodation options</li>
+            <li>Created real-time dashboard with property metrics and comprehensive admin moderation tools</li>
+        </ul>
+        
+        <div class="project-title">E-Commerce Platform (MVC Architecture)</div>
+        <div class="tech-stack">Technologies: Node.js, Express MVC, MongoDB, AWS, Docker, Redis</div>
+        <ul>
+            <li>Architected scalable e-commerce platform using MVC design pattern serving 1000+ concurrent users</li>
+            <li>Implemented robust MongoDB schemas with data validation and JWT authentication</li>
+            <li>Deployed containerized application on AWS with client-side caching using localStorage for improved performance</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="education-item">
+            <div class="degree">Bachelor of Science in Computer Science</div>
+            <div class="school">Egyptian E-Learning University (EELU) | Cairo, Egypt | 2021 - 2025</div>
+            <ul>
+                <li>Relevant Coursework: Data Structures & Algorithms, Software Engineering, Database Systems, Web Development, Computer Networks</li>
+                <li>Senior Project: software solution with an integrated AI solution that enables early detection and diagnosis of various congenital disorders (Grade: A+)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Certifications & Professional Development</h2>
+        <div class="cert-item"><strong>DevOps Engineer Professional Certificate - DEPI</strong> | 2024</div>
+        <div class="cert-item"><strong>Microsoft Security Training Certificate</strong> | 2023</div>
+        <div class="cert-item"><strong>Cisco Certified Network Associate (CCNA)</strong> | 2022</div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Additional Qualifications</h2>
+        <p><strong>Languages:</strong> English (Professional Working Proficiency), Arabic (Native)<br>
+        <strong>Soft Skills:</strong> Leadership, Problem-Solving, Team Collaboration, Project Management, Technical Documentation<br>
+        <strong>Professional Activities:</strong>Regular participant in tech meetups and conferences, Continuous learner in emerging cloud technologies and software engineering best practices</p>
+    </div>
+</body>
+</html>

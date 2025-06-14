@@ -1,10 +1,10 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ahmedabdelmohsen.com';
+  const baseUrl = 'https://ahmed-abd-elmohsen.vercel.app';
   
   // قائمة الصفحات الثابتة في موقعك
-  const routes = ['', '/projects', '/about', '/contact'].map((route) => ({
+  const routes = ['', '/projects', '/about', '/contact', '/resume'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
@@ -33,4 +33,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
   
   return [...routes, ...projects] as MetadataRoute.Sitemap;
-} 
+}
