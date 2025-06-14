@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     canonical: "https://ahmed-abd-elmohsen.vercel.app",
   },
   verification: {
-    google: "your-google-verification-code", // Add your actual verification code
+    google: "_M7xG8pu4J-Nmb8PGYCF829JndamEAV4ksXjX6nzCjw",
   },
 };
 
