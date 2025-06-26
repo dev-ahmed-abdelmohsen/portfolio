@@ -11,7 +11,7 @@ Results-driven Software Engineer with 3+ years of experience developing scalable
 
 **Frontend:** React, Next.js, TypeScript, React Native, Tailwind CSS, Framer Motion  
 **Backend:** Node.js, Express, Java, REST API, JWT Authentication  
-**Database:** MongoDB, PostgreSQL, MySQL, Redis  
+**Database:** MongoDB, MS SQL Server, MySQL
 **DevOps:** Docker, AWS (EC2, S3, Lambda), CI/CD, Vercel  
 **Additional:** Leaflet Maps, Material UI, AI Integration, RTL Support
 

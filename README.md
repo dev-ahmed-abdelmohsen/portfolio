@@ -22,7 +22,7 @@ A comprehensive, modern portfolio website built with Next.js, TypeScript, and Ta
 
 ### Backend & Infrastructure
 - **API Routes**: Next.js API routes for server-side functionality
-- **Database**: PostgreSQL for production data
+- **Database**: Mongodb for production data
 - **File Storage**: AWS S3 for media and document storage
 - **Deployment**: aws with automatic CI/CD
 - **Monitoring**: Vercel Analytics and Google Analytics

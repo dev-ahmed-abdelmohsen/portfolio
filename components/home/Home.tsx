@@ -20,7 +20,7 @@ const skills = [
   },
   { 
     name: 'Database', 
-    items: ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis', 'Database Design'],
+    items: ['MongoDB', 'MS SQL Server', 'MySQL', 'Database Design'],
     icon: '🗄️',
     color: 'from-orange-500 to-red-600'
   },

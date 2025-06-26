@@ -24,7 +24,7 @@ Full Stack Software Engineer with 3+ years of expertise in building scalable web
 ### Backend Development
 - **Core Technologies:** Node.js, Express.js, Java
 - **API Development:** RESTful APIs, GraphQL, JWT Authentication
-- **Databases:** MongoDB, PostgreSQL, MySQL, Redis
+- **Databases:** MongoDB, MySQL
 
 ### DevOps & Deployment
 - **Cloud Platforms:** AWS (EC2, S3, Lambda), Vercel, Netlify
