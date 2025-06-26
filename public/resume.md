@@ -2,7 +2,7 @@
 **Software Engineer** | **Full-Stack Developer** | **Cloud Solutions Architect**
 
 **Email:** ashams3719262@gmail.com | **Phone:** +20 123 456 7890 | **Location:** Cairo, Egypt  
-**LinkedIn:** [linkedin.com/in/ahmed-838-shams/](https://linkedin.com/in/ahmed-838-shams/) | **GitHub:** [github.com/ahmed-838](https://github.com/ahmed-838) | **Portfolio:** [ahmed-abd-elmohsen.vercel.app](https://ahmed-abd-elmohsen.vercel.app)
+**LinkedIn:** [https://www.linkedin.com/in/dev-ahmed-abdelmohsen/](https://www.linkedin.com/in/dev-ahmed-abdelmohsen/) | **GitHub:** [https://github.com/dev-ahmed-abdelmohsen/](https://github.com/dev-ahmed-abdelmohsen) | **Portfolio:** [ahmed-abd-elmohsen.vercel.app](https://ahmed-abd-elmohsen.vercel.app)
 
 ## Professional Summary
 Results-driven Software Engineer with 3+ years of experience developing scalable web and mobile applications. Specialized in full-stack development using React, Next.js, Node.js and TypeScript. Proven expertise in designing complex architectures for multi-platform applications, implementing AI integrations, and building responsive solutions that support RTL languages. Successfully delivered projects with 20,000+ combined users across e-commerce, healthcare, and housing sectors, achieving 95+ performance scores and maintaining 99.9% uptime on production systems.

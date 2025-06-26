@@ -8,7 +8,7 @@ const resumeContent = `
 **Full Stack Software Engineer**
 
 📧 ashams3719262@gmail.com | 📱 +20 123 456 7890  
-🌐 [LinkedIn](https://linkedin.com/in/ahmed-838-shams/) | 💻 [GitHub](https://github.com/ahmed-838) | 🌍 Cairo, Egypt
+🌐 [LinkedIn](https://www.linkedin.com/in/dev-ahmed-abdelmohsen/) | 💻 [GitHub](https://github.com/dev-ahmed-abdelmohsen) | 🌍 Cairo, Egypt
 
 ## Professional Summary
 

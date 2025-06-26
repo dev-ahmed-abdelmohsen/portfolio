@@ -60,8 +60,8 @@ This portfolio includes multiple resume formats optimized for different purposes
 
 Always ensure your contact information is current:
 - Email: ashams3719262@gmail.com
-- LinkedIn: linkedin.com/in/ahmed-838-shams/
-- GitHub: github.com/ahmed-838
+- LinkedIn: https://www.linkedin.com/in/dev-ahmed-abdelmohsen/
+- GitHub: https://github.com/dev-ahmed-abdelmohsen
 - Portfolio: ahmed-abd-elmohsen.vercel.app
 
 ## ATS Scoring Optimization

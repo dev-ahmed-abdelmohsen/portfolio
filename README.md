@@ -63,7 +63,7 @@ A comprehensive, modern portfolio website built with Next.js, TypeScript, and Ta
 
 ```bash
 # Clone the repository
-git clone https://github.com/ahmed-838/portfolio.git
+git clone https://github.com/dev-ahmed-abdelmohsen/portfolio.git
 cd portfolio
 
 # Install dependencies
@@ -141,8 +141,8 @@ npx vercel --prod
 ## 📞 Professional Contact
 
 - **Email**: ahmed.abdelmohsen@email.com
-- **LinkedIn**: [Ahmed Abd Elmohsen](https://www.linkedin.com/in/ahmed-838-shams/)
-- **GitHub**: [ahmed-abdelmohsen](https://github.com/ahmed-838)
+- **LinkedIn**: [Ahmed Abd Elmohsen](https://www.linkedin.com/in/dev-ahmed-abdelmohsen/)
+- **GitHub**: [ahmed-abdelmohsen](https://github.com/dev-ahmed-abdelmohsen)
 - **Portfolio**: [Live Demo](https://ahmed-abd-elmohsen.vercel.app/)
 
 ## 📄 License

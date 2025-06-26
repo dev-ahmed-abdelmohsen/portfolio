@@ -440,7 +440,7 @@ export default function Home() {
                 icon: '💼', 
                 title: 'LinkedIn', 
                 value: 'Connect professionally', 
-                href: 'https://linkedin.com/in/ahmed-838-shams/',
+                href: 'https://www.linkedin.com/in/dev-ahmed-abdelmohsen/',
                 description: 'Professional network',
                 color: 'from-blue-600 to-blue-800'
               },
@@ -448,7 +448,7 @@ export default function Home() {
                 icon: '🐙', 
                 title: 'GitHub', 
                 value: 'Check my code', 
-                href: 'https://github.com/ahmed-838',
+                href: 'https://github.com/dev-ahmed-abdelmohsen',
                 description: 'Open source projects',
                 color: 'from-gray-700 to-gray-900'
               },

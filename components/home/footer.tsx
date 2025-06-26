@@ -54,7 +54,7 @@ export default function Footer() {
             <h4 className="text-lg font-medium mb-4">Connect With Me</h4>
             <div className="flex space-x-4">
               <a 
-                href="https://github.com/ahmed-838" 
+                href="https://github.com/dev-ahmed-abdelmohsen" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-teal-400 transition"
@@ -65,7 +65,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a 
-                href="https://www.linkedin.com/in/ahmed-838-shams/" 
+                href="https://www.linkedin.com/in/dev-ahmed-abdelmohsen/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-teal-400 transition"
