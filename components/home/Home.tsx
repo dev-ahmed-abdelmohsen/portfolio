@@ -456,7 +456,7 @@ export default function Home() {
                 icon: '💬', 
                 title: 'WhatsApp', 
                 value: 'Quick chat', 
-                href: 'https://wa.me/01224900205',
+                href: 'https://wa.me/201224900205',
                 description: 'Instant messaging',
                 color: 'from-green-500 to-green-700'
               },
@@ -579,7 +579,7 @@ export default function Home() {
                     Send Email
                   </motion.a>
                   <motion.a
-                    href="https://wa.me/01224900205"
+                    href="https://wa.me/201224900205"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-6 py-3 bg-green-500 text-white rounded-full font-semibold hover:bg-green-600 transition-all duration-300 flex items-center justify-center"
