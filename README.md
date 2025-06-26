@@ -11,28 +11,6 @@ A comprehensive, modern portfolio website built with Next.js, TypeScript, and Ta
 - **Performance Focused** - Lighthouse scores 95+ across all metrics
 - **Professional Contact System** - Integrated contact forms and professional communication
 
-## 🎯 Professional Projects Featured
-
-### 1. Islamic Azkar Mobile Application
-- **Technology Stack**: React Native, Firebase, Push Notifications, GPS Integration
-- **Impact**: 10,000+ downloads, 4.8/5 rating on Google Play Store
-- **Features**: Offline functionality, prayer time notifications, Qibla direction
-
-### 2. Real Estate Management Platform
-- **Technology Stack**: Next.js, Node.js, PostgreSQL, AWS, Stripe Integration
-- **Impact**: 25% increase in lead generation for real estate clients
-- **Features**: Property search, booking system, admin dashboard, analytics
-
-### 3. E-Commerce Platform
-- **Technology Stack**: React, Express.js, MongoDB, Stripe, Redis
-- **Impact**: 30% increase in conversion rates
-- **Features**: Full shopping cart, payment processing, inventory management
-
-### 4. Professional Portfolio System
-- **Technology Stack**: Next.js, TypeScript, TailwindCSS, Framer Motion
-- **Impact**: 95+ Lighthouse performance score
-- **Features**: ATS resume generation, SEO optimization, responsive design
-
 ## 🛠 Technical Stack
 
 ### Frontend
@@ -46,7 +24,7 @@ A comprehensive, modern portfolio website built with Next.js, TypeScript, and Ta
 - **API Routes**: Next.js API routes for server-side functionality
 - **Database**: PostgreSQL for production data
 - **File Storage**: AWS S3 for media and document storage
-- **Deployment**: Vercel with automatic CI/CD
+- **Deployment**: aws with automatic CI/CD
 - **Monitoring**: Vercel Analytics and Google Analytics
 
 ### Resume System
@@ -85,15 +63,11 @@ A comprehensive, modern portfolio website built with Next.js, TypeScript, and Ta
 
 ```bash
 # Clone the repository
-git clone https://github.com/ahmed-abdelmohsen/professional-portfolio.git
-cd professional-portfolio
+git clone https://github.com/ahmed-838/portfolio.git
+cd portfolio
 
 # Install dependencies
 npm install
-
-# Set up environment variables
-cp .env.example .env.local
-# Edit .env.local with your configuration
 
 # Run development server
 npm run dev
@@ -167,9 +141,9 @@ npx vercel --prod
 ## 📞 Professional Contact
 
 - **Email**: ahmed.abdelmohsen@email.com
-- **LinkedIn**: [Ahmed Abd Elmohsen](https://linkedin.com/in/ahmed-abdelmohsen)
-- **GitHub**: [ahmed-abdelmohsen](https://github.com/ahmed-abdelmohsen)
-- **Portfolio**: [Live Demo](https://ahmed-portfolio.vercel.app)
+- **LinkedIn**: [Ahmed Abd Elmohsen](https://www.linkedin.com/in/ahmed-838-shams/)
+- **GitHub**: [ahmed-abdelmohsen](https://github.com/ahmed-838)
+- **Portfolio**: [Live Demo](https://ahmed-abd-elmohsen.vercel.app/)
 
 ## 📄 License
 
