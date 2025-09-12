@@ -41,7 +41,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link 
             href="#" 
-            className={`text-2xl font-bold ${scrolled ? 'text-gray-900 dark:text-white' : 'text-white'}`}
+            className={`text-lg font-bold ${scrolled ? 'text-gray-900 dark:text-white' : 'text-white'}`}
           >
             <span className="text-teal-600">{'<'}</span>
             Ahmed Abd Elmohsen

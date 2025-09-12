@@ -7,16 +7,21 @@ import Image from 'next/image';
 
 const skills = [
   { 
-    name: 'Backend', 
-    items: ['Node.js', 'Express.js', 'Java', 'Python', 'Flask', 'REST APIs'],
-    icon: '🔧',
-    color: 'from-blue-500 to-purple-600'
-  },
-  { 
     name: 'DevOps', 
-    items: ['Docker', 'AWS (EC2, S3)', 'CI/CD', 'Git', 'Linux', 'Nginx'],
+    items: ['AWS','Networking','Linux','Docker', 'Docker Compose'],
     icon: '⚙️',
     color: 'from-green-500 to-teal-600'
+  },{ 
+    name: 'Automation & IaC', 
+    items: ['Jenkins', 'Travis', 'GitHub Actions', 'Terraform', 'Ansible'],
+    icon: '⚙️',
+    color: 'from-green-500 to-teal-600'
+  },
+  { 
+    name: 'Backend', 
+    items: ['Node.js', 'Java', 'Python', 'Flask', 'REST APIs'],
+    icon: '🔧',
+    color: 'from-blue-500 to-purple-600'
   },
   { 
     name: 'Database', 
@@ -26,7 +31,7 @@ const skills = [
   },
   { 
     name: 'Frontend', 
-    items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
     icon: '💻',
     color: 'from-cyan-500 to-blue-600'
   },
@@ -104,7 +109,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen text-sm">
       {/* Optimized Hero Section */}
       <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white overflow-hidden">
         {/* Simplified background elements - only render if motion is allowed */}
@@ -131,20 +136,12 @@ export default function Home() {
           animate={isVisible ? "visible" : "hidden"}
         >
           {/* Optimized avatar section */}
-          <motion.div
-            variants={heroVariants}
-            className="mb-8"
-          >
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-teal-400 to-blue-500 p-1 mb-6">
-              <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
-                <span className="text-4xl">👨‍💻</span>
-              </div>
-            </div>
-          </motion.div>
+          {/* add more space */}
+          <div className="h-32 sm:h-26 lg:h-30"></div>
 
           {/* Optimized title */}
           <motion.h1 
-            className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+            className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-5 leading-tight"
             variants={heroVariants}
           >
             <span className="block">Hello, I'm</span>
@@ -156,9 +153,9 @@ export default function Home() {
           {/* Simplified subtitle */}
           <motion.div
             variants={heroVariants}
-            className="mb-8"
+            className="mb-6"
           >
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light mb-4 text-gray-300">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-light mb-3 text-gray-300">
               Software Engineer
             </h2>
             <div className="flex flex-wrap justify-center gap-3 mb-8">
@@ -172,7 +169,7 @@ export default function Home() {
 
           {/* Optimized description with critical CSS classes for LCP */}
           <motion.p 
-            className="max-w-3xl text-gray-300 mb-12 text-lg sm:text-xl leading-relaxed hero-text"
+            className="max-w-2xl text-gray-300 mb-10 text-base sm:text-lg leading-relaxed hero-text"
             variants={heroVariants}
             style={{ willChange: shouldReduceMotion ? 'auto' : 'transform, opacity' }}
           >
@@ -198,12 +195,12 @@ export default function Home() {
       {/* Optimized Stats Section */}
       <motion.section 
         ref={statsRef}
-        className="py-20 bg-slate-900 text-white relative overflow-hidden"
+        className="py-14 bg-slate-900 text-white relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-teal-900/20 to-blue-900/20"></div>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 
-            className="grid grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-4 gap-3 sm:gap-5 lg:gap-6"
             variants={containerVariants}
             initial="hidden"
             animate={isStatsInView ? "visible" : "hidden"}
@@ -215,11 +212,11 @@ export default function Home() {
                 className="text-center group"
                 style={{ willChange: shouldReduceMotion ? 'auto' : 'transform' }}
               >
-                <div className="text-4xl mb-2">{stat.icon}</div>
-                <div className="text-3xl lg:text-4xl font-bold text-teal-400 mb-2 group-hover:scale-110 transition-transform">
+                <div className="text-2xl sm:text-3xl lg:text-4xl mb-1 sm:mb-2">{stat.icon}</div>
+                <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-teal-400 mb-1 sm:mb-2 group-hover:scale-110 transition-transform">
                   {stat.number}
                 </div>
-                <div className="text-gray-300 text-sm lg:text-base">{stat.label}</div>
+                <div className="text-gray-300 text-xs sm:text-sm lg:text-base leading-tight">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -227,16 +224,16 @@ export default function Home() {
       </motion.section>
 
       {/* Optimized About Section */}
-      <section ref={aboutRef} className="py-24 bg-white relative overflow-hidden">
+      <section ref={aboutRef} className="py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-white"></div>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 
-            className="text-center mb-20"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 50 }}
             animate={isAboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">About Me</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">About Me</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-600 mx-auto"></div>
           </motion.div>
           
@@ -252,16 +249,16 @@ export default function Home() {
                 {!shouldReduceMotion && (
                   <div className="absolute inset-0 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full blur-2xl opacity-20 scale-110"></div>
                 )}
-                <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-gradient-to-r from-teal-400 to-blue-500 bg-white shadow-2xl">
+                <div className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-full overflow-hidden border-3 border-gradient-to-r from-teal-400 to-blue-500 bg-white shadow-xl">
                   <Image 
-                    src="/profile_3.jpeg" 
+                    src="/test-face.jpg" 
                     alt="Ahmed Abd Elmohsen" 
                     fill
                     className="object-cover hover:scale-110 transition-transform duration-700 ease-out"
-                    sizes="(max-width: 640px) 16rem, (max-width: 768px) 20rem, 20rem"
+                    sizes="(max-width: 640px) 14rem, (max-width: 768px) 16rem, 16rem"
                     priority
                     style={{
-                      objectPosition: 'center 20%',
+                      objectPosition: '30% 20%',
                     }}
                   />
                 </div>
@@ -283,11 +280,11 @@ export default function Home() {
               animate={isAboutInView ? { opacity: 1, x: 0 } : { opacity: 0, x: shouldReduceMotion ? 0 : -50 }}
               transition={{ duration: shouldReduceMotion ? 0.1 : 0.6, delay: shouldReduceMotion ? 0 : 0.1 }}
             >
-              <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-center lg:text-left">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-center lg:text-left">
                 I'm <span className="bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">Ahmed Abd Elmohsen</span>, 
                 a passionate Software Engineer
               </h3>
-              <div className="space-y-4 text-gray-600 text-base sm:text-lg leading-relaxed text-center lg:text-left">
+              <div className="space-y-3 text-gray-600 text-sm sm:text-base leading-relaxed text-center lg:text-left">
                 <p>
                   With over 3 years of hands-on experience in software development, I specialize in building 
                   robust backend systems and scalable cloud infrastructure that power modern applications.
@@ -311,7 +308,7 @@ export default function Home() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Download Resume
+                  See My Resume
                 </motion.a>
                 <motion.a 
                   href="#contact" 
@@ -328,20 +325,18 @@ export default function Home() {
       </section>
 
       {/* Enhanced Skills Section */}
-      <section ref={skillsRef} className="py-24 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
+      <section ref={skillsRef} className="py-20 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-100/50 via-transparent to-transparent"></div>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 
-            className="text-center mb-20"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 50 }}
             animate={isSkillsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">Technical Expertise</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-blue-600 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Specialized in modern technologies and frameworks that power today's digital solutions
-            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">What I Do</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-teal-500 to-blue-600 mx-auto mb-4"></div>
+              
           </motion.div>
           
           <motion.div 
@@ -359,13 +354,13 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl blur-xl -z-10"
                      style={{ background: `linear-gradient(135deg, ${category.color.split(' ')[1]}, ${category.color.split(' ')[3]})` }}>
                 </div>
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform group-hover:-translate-y-2 border border-gray-100 relative z-10">
-                  <div className="flex items-center mb-6">
-                    <div className="text-3xl mr-4">{category.icon}</div>
-                    <h3 className="text-2xl font-bold text-gray-900">{category.name}</h3>
+                <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 transform group-hover:-translate-y-1 border border-gray-100 relative z-10">
+                  <div className="flex items-center mb-4">
+                    <div className="text-2xl mr-3">{category.icon}</div>
+                    <h3 className="text-xl font-bold text-gray-900">{category.name}</h3>
                   </div>
                   
-                  <div className="space-y-3">
+                  <div className="space-y-2">
                     {category.items.map((skill, skillIndex) => (
                       <motion.div
                         key={skill}
@@ -400,7 +395,7 @@ export default function Home() {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">Featured Projects</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-teal-400 to-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover my latest work showcasing innovative solutions and cutting-edge technologies
+              Here are some of the projects I've worked on recently. Each project showcases my skills in DevOps, backend development, and cloud infrastructure.
             </p>
           </motion.div>
           
@@ -412,8 +407,7 @@ export default function Home() {
       <section ref={contactRef} id="contact" className="py-24 bg-gradient-to-br from-white to-slate-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-teal-100/30 via-transparent to-transparent"></div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div 
-            className="text-center mb-20"
+          {/* <motion.div 
             initial={{ opacity: 0, y: 50 }}
             animate={isContactInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8 }}
@@ -423,10 +417,10 @@ export default function Home() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               I'm always interested in new opportunities and collaborations. Let's discuss how we can work together.
             </p>
-          </motion.div>
+          </motion.div> */}
           
           {/* Contact Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {[
               { 
                 icon: '📧', 
@@ -483,12 +477,12 @@ export default function Home() {
                 </div>
               </motion.a>
             ))}
-          </div>
+          </div> */}
 
           {/* Main Content Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Professional Info Card */}
-            <motion.div 
+            {/* <motion.div 
               className="bg-gradient-to-br from-slate-900 to-gray-900 p-10 rounded-3xl text-white relative overflow-hidden"
               initial={{ opacity: 0, x: -50 }}
               animate={isContactInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -522,7 +516,7 @@ export default function Home() {
                   <p className="text-gray-400 text-sm">Faster response via WhatsApp</p>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
             
             {/* Services & Availability */}
             <motion.div
@@ -532,7 +526,7 @@ export default function Home() {
               className="space-y-8"
             >
               {/* Services Offered */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+              {/* <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                   <span className="text-2xl mr-3">🚀</span>
                   Services I Offer
@@ -560,7 +554,7 @@ export default function Home() {
                     </motion.div>
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               {/* Call to Action */}
               <div className="bg-gradient-to-r from-teal-600 to-blue-600 p-8 rounded-2xl text-white text-center">

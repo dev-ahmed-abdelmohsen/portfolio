@@ -35,15 +35,6 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "ViewStore - E-Commerce Platform",
-    description: "Multi-tiered e-commerce solution with separate customer storefront and admin dashboard. Features product management, promotional offers, secure authentication, and Arabic language support.",
-    image: "/projects/viewstore.png",
-    tags: ["Next.js", "Express", "MongoDB", "JWT", "Material UI"],
-    link: "https://viewstore.vercel.app/",
-    category: "E-Commerce"
-  },
-  {
-    id: 4,
     title: "Mawa - Student Housing Platform",
     description: "Comprehensive student housing management system connecting property owners with student tenants. Features map-based property search, multi-role interfaces, and RTL support for Arabic markets.",
     image: "/projects/mawa1.png",

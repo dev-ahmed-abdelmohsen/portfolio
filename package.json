@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "dev:clean": "rimraf .next && next dev",
+    "dev": "next dev --hostname 0.0.0.0 -p 3000",
+    "dev:clean": "rimraf .next && next dev --hostname 0.0.0.0 -p 3000",
     "build": "next build",
     "build:analyze": "ANALYZE=true next build",
     "start": "next start",
