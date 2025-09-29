@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 type Project = {
@@ -11,6 +12,7 @@ type Project = {
   image: string;
   tags: string[];
   link?: string;
+  caseStudyUrl: string;
   category: string;
 };
 
@@ -22,6 +24,7 @@ const projects: Project[] = [
     image: "/projects/azkar.png",
     tags: ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "Framer Motion"],
     link: "https://gencare.vercel.app/",
+    caseStudyUrl: "/projects/athkar",
     category: "Web Application"
   },
   {
@@ -31,6 +34,7 @@ const projects: Project[] = [
     image: "/projects/gencare.png",
     tags: ["React Native", "Expo", "Node.js", "MongoDB", "AWS", "ML/AI"],
     link: "https://gen-care-website.vercel.app/",
+    caseStudyUrl: "/projects/gencare",
     category: "Mobile App"
   },
   {
@@ -40,6 +44,7 @@ const projects: Project[] = [
     image: "/projects/mawa1.png",
     tags: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Leaflet Maps"],
     link: "https://mawa-rho.vercel.app/map/",
+    caseStudyUrl: "/projects/mawa",
     category: "Platform"
   },
 ];
@@ -231,43 +236,14 @@ export default function ProjectSlider() {
                     {projects[currentIndex].description}
                   </motion.p>
 
-                  {/* Tags */}
-                  <motion.div 
+                  {/* CTA Button */}
+                  <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                    className="flex flex-wrap gap-1 sm:gap-2 mb-4 sm:mb-6 lg:mb-8"
+                    transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
                   >
-                    {projects[currentIndex].tags.slice(0, 4).map((tag, idx) => (
-                      <motion.span 
-                        key={tag}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: 0.5 + idx * 0.1 }}
-                        className="px-2 sm:px-3 lg:px-4 py-1 sm:py-1.5 lg:py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-xs sm:text-sm font-medium hover:bg-white/20 transition-all duration-300"
-                        whileHover={{ y: -2, scale: 1.05 }}
-                      >
-                        {tag}
-                      </motion.span>
-                    ))}
-                    {projects[currentIndex].tags.length > 4 && (
-                      <span className="px-2 sm:px-3 py-1 sm:py-1.5 bg-white/5 border border-white/10 rounded-full text-white/60 text-xs sm:text-sm">
-                        +{projects[currentIndex].tags.length - 4}
-                      </span>
-                    )}
-                  </motion.div>
-
-                  {/* CTA Button */}
-                  {projects[currentIndex].link && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-                    >
+                    <Link href={projects[currentIndex].caseStudyUrl}>
                       <motion.a 
-                        href={projects[currentIndex].link}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="group inline-flex items-center px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 bg-gradient-to-r from-teal-500 to-blue-600 text-white font-semibold rounded-full hover:from-teal-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-teal-500/25 transform hover:scale-105 text-sm sm:text-base"
                         whileHover={{ 
                           scale: 1.05,
@@ -289,8 +265,8 @@ export default function ProjectSlider() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </motion.svg>
                       </motion.a>
-                    </motion.div>
-                  )}
+                    </Link>
+                  </motion.div>
                 </div>
               </div>
             </div>
