@@ -17,25 +17,25 @@ type Project = {
 };
 
 const projects: Project[] = [
+  // {
+  //   id: 1,
+  //   title: "Athkar - Islamic Supplications App",
+  //   description:
+  //     "Interactive web application providing daily Islamic supplications (Adhkar) and Quran learning features with a modern, responsive UI. Includes morning/evening Adhkar collections and Tajweed lessons.",
+  //   image: "/projects/azkar.png",
+  //   tags: [
+  //     "Next.js",
+  //     "React 19",
+  //     "TypeScript",
+  //     "Tailwind CSS",
+  //     "Framer Motion",
+  //   ],
+  //   link: "https://gencare.vercel.app/",
+  //   caseStudyUrl: "/projects/athkar",
+  //   category: "Web Application",
+  // },
   {
     id: 1,
-    title: "Athkar - Islamic Supplications App",
-    description:
-      "Interactive web application providing daily Islamic supplications (Adhkar) and Quran learning features with a modern, responsive UI. Includes morning/evening Adhkar collections and Tajweed lessons.",
-    image: "/projects/azkar.png",
-    tags: [
-      "Next.js",
-      "React 19",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-    ],
-    link: "https://gencare.vercel.app/",
-    caseStudyUrl: "/projects/athkar",
-    category: "Web Application",
-  },
-  {
-    id: 2,
     title: "GenCare - Pregnancy Care Application",
     description:
       "Comprehensive mobile application supporting expecting mothers with personalized health tracking, pregnancy information, and AI-powered ultrasound analysis for disease detection.",
@@ -46,7 +46,7 @@ const projects: Project[] = [
     category: "Mobile App",
   },
   {
-    id: 3,
+    id: 2,
     title: "Mawa - Student Housing Platform",
     description:
       "Comprehensive student housing management system connecting property owners with student tenants. Features map-based property search, multi-role interfaces, and RTL support for Arabic markets.",
