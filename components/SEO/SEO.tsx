@@ -22,7 +22,7 @@ interface SEOProps {
  * Handles meta tags, Open Graph, Twitter Cards, and Schema.org structured data
  */
 const SEO = ({
-  title = "Ahmed Abd Elmohsen | Software Engineer",
+  title = "Ahmed Abd Elmohsen",
   description = "Professional portfolio showcasing my work as a Software Engineer with expertise in backend development and DevOps practices.",
   canonicalUrl,
   ogType = "website",

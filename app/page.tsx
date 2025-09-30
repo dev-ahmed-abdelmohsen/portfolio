@@ -5,16 +5,19 @@ import Footer from "../components/home/footer";
 import SchemaOrg from "../components/SEO/SchemaOrg";
 
 export const metadata: Metadata = {
-  title: "Ahmed Abd Elmohsen | Software Engineer Portfolio",
-  description: "Professional portfolio showcasing my work as a Software Engineer with expertise in backend development and DevOps practices.",
+  title: "Ahmed Abd Elmohsen",
+  description:
+    "Professional portfolio showcasing my work as a Software Engineer with expertise in backend development and DevOps practices.",
   openGraph: {
-    title: "Ahmed Abd Elmohsen | Software Engineer Portfolio",
-    description: "Professional portfolio showcasing my work as a Software Engineer with expertise in backend development and DevOps practices.",
+    title: "Ahmed Abd Elmohsen Portfolio",
+    description:
+      "Professional portfolio showcasing my work as a Software Engineer with expertise in backend development and DevOps practices.",
     url: "https://ahmed-abd-elmohsen.tech",
   },
   twitter: {
-    title: "Ahmed Abd Elmohsen | Software Engineer Portfolio",
-    description: "Professional portfolio showcasing my work as a Software Engineer with expertise in backend development and DevOps practices.",
+    title: "Ahmed Abd Elmohsen Portfolio",
+    description:
+      "Professional portfolio showcasing my work as a Software Engineer with expertise in backend development and DevOps practices.",
   },
   alternates: {
     canonical: "https://ahmed-abd-elmohsen.tech",
@@ -24,7 +27,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      <SchemaOrg 
+      <SchemaOrg
         url="https://ahmed-abd-elmohsen.tech"
         title="Ahmed Abd Elmohsen"
         description="Professional portfolio showcasing my work as a Software Engineer with expertise in backend development and DevOps practices."
