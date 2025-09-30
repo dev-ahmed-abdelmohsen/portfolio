@@ -34,7 +34,7 @@ export default function GencareProjectPage() {
               Mobile App
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-              GenCare - Pregnancy Care Application
+              GenCare - Pregnancy Care Mobile Application
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-2xl">
               Supporting expecting mothers with personalized health tracking and

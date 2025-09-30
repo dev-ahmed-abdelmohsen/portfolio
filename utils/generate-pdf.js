@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const puppeteer = require('puppeteer');
+const fs = require("fs");
+const path = require("path");
+const puppeteer = require("puppeteer");
 
 // Professional resume content
 const resumeContent = `
@@ -53,7 +53,7 @@ Full Stack Software Engineer with 3+ years of expertise in building scalable web
 - Built dark/light mode support with automatic preference detection
 - Optimized performance achieving 97 PageSpeed score
 
-### GenCare - Pregnancy Care Application
+### GenCare - Pregnancy Care Mobile Application
 **React Native, Expo, Node.js, Express, MongoDB, AWS, Machine Learning**
 - Built comprehensive mobile app supporting expecting mothers throughout pregnancy
 - Implemented AI-powered ultrasound image analysis for potential disease detection
@@ -69,7 +69,7 @@ Full Stack Software Engineer with 3+ years of expertise in building scalable web
 - Created secure authentication with role-based access control
 - Built RTL support for Arabic-speaking markets, increasing regional sales by 35%
 
-### Mawa - Student Housing Platform
+### Mawa - Student Housing Web Platform
 **Next.js 15, React 19, Node.js, MongoDB, Leaflet Maps**
 - Designed housing management system with map-based property search functionality
 - Implemented multi-role architecture with separate interfaces for different user types
@@ -106,8 +106,8 @@ Full Stack Software Engineer with 3+ years of expertise in building scalable web
 
 async function generatePDF() {
   try {
-    console.log('Starting professional PDF generation...');
-    
+    console.log("Starting professional PDF generation...");
+
     // Convert markdown to professional HTML
     const htmlContent = `
       <!DOCTYPE html>
@@ -268,44 +268,44 @@ async function generatePDF() {
       </body>
       </html>
     `;
-    
-    console.log('Launching browser...');
+
+    console.log("Launching browser...");
     const browser = await puppeteer.launch({
       headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
     });
-    
+
     const page = await browser.newPage();
-    
-    console.log('Setting page content...');
-    await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
-    
-    console.log('Generating professional PDF...');
-    const pdfPath = path.join(__dirname, '../public/resume.pdf');
+
+    console.log("Setting page content...");
+    await page.setContent(htmlContent, { waitUntil: "networkidle0" });
+
+    console.log("Generating professional PDF...");
+    const pdfPath = path.join(__dirname, "../public/resume.pdf");
     await page.pdf({
       path: pdfPath,
-      format: 'A4',
+      format: "A4",
       printBackground: true,
       margin: {
-        top: '0.5in',
-        bottom: '0.5in',
-        left: '0.5in',
-        right: '0.5in'
+        top: "0.5in",
+        bottom: "0.5in",
+        left: "0.5in",
+        right: "0.5in",
       },
-      preferCSSPageSize: true
+      preferCSSPageSize: true,
     });
-    
+
     // Also save the HTML version for ATS
-    const atsHtmlPath = path.join(__dirname, '../public/ats-resume.html');
+    const atsHtmlPath = path.join(__dirname, "../public/ats-resume.html");
     fs.writeFileSync(atsHtmlPath, htmlContent);
-    
+
     await browser.close();
-    
+
     console.log(`Professional PDF generated successfully: ${pdfPath}`);
     console.log(`ATS-optimized HTML saved: ${atsHtmlPath}`);
     return pdfPath;
   } catch (error) {
-    console.error('Error generating PDF:', error);
+    console.error("Error generating PDF:", error);
     throw error;
   }
 }
@@ -313,28 +313,28 @@ async function generatePDF() {
 // Enhanced markdown to HTML converter for professional formatting
 function convertMarkdownToHTML(markdown) {
   // Split content into lines for better processing
-  const lines = markdown.split('\n');
-  let html = '';
+  const lines = markdown.split("\n");
+  let html = "";
   let inList = false;
-  let currentSection = '';
+  let currentSection = "";
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i].trim();
-    
+
     // Skip empty lines
     if (!line) {
       if (inList) {
-        html += '</ul>';
+        html += "</ul>";
         inList = false;
       }
-      html += '\n';
+      html += "\n";
       continue;
     }
 
     // Main title (h1)
-    if (line.startsWith('# ')) {
+    if (line.startsWith("# ")) {
       if (inList) {
-        html += '</ul>';
+        html += "</ul>";
         inList = false;
       }
       html += `<h1>${line.substring(2)}</h1>\n`;
@@ -342,7 +342,7 @@ function convertMarkdownToHTML(markdown) {
     // Job title format (bold with pipe)
     else if (line.match(/^\*\*.*\|\*\*$/)) {
       if (inList) {
-        html += '</ul>';
+        html += "</ul>";
         inList = false;
       }
       const match = line.match(/^\*\*(.*?)\s*\|\s*(.*?)\*\*$/);
@@ -354,13 +354,14 @@ function convertMarkdownToHTML(markdown) {
       }
     }
     // Subtitle (bold on its own line)
-    else if (line.match(/^\*\*.*\*\*$/) && !line.includes('|')) {
+    else if (line.match(/^\*\*.*\*\*$/) && !line.includes("|")) {
       if (inList) {
-        html += '</ul>';
+        html += "</ul>";
         inList = false;
       }
-      const title = line.replace(/^\*\*(.*)\*\*$/, '$1');
-      if (i === 1) { // Second line is typically the job title
+      const title = line.replace(/^\*\*(.*)\*\*$/, "$1");
+      if (i === 1) {
+        // Second line is typically the job title
         html += `<div class="title">${title}</div>\n`;
       } else {
         html += `<div class="company">${title}</div>\n`;
@@ -369,51 +370,59 @@ function convertMarkdownToHTML(markdown) {
     // Contact info line (starts with emoji)
     else if (line.match(/^📧|^🌐|^💻|^🌍/)) {
       if (inList) {
-        html += '</ul>';
+        html += "</ul>";
         inList = false;
       }
       // Process links in contact info
-      const processedLine = line.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>');
+      const processedLine = line.replace(
+        /\[(.*?)\]\((.*?)\)/g,
+        '<a href="$2">$1</a>'
+      );
       html += `<div class="contact-info">${processedLine}</div>\n`;
     }
     // Section headers (h2)
-    else if (line.startsWith('## ')) {
+    else if (line.startsWith("## ")) {
       if (inList) {
-        html += '</ul>';
+        html += "</ul>";
         inList = false;
       }
       currentSection = line.substring(3);
       html += `<h2>${currentSection}</h2>\n`;
     }
     // Subsection headers (h3)
-    else if (line.startsWith('### ')) {
+    else if (line.startsWith("### ")) {
       if (inList) {
-        html += '</ul>';
+        html += "</ul>";
         inList = false;
       }
       html += `<h3>${line.substring(4)}</h3>\n`;
     }
     // List items
-    else if (line.startsWith('- ')) {
+    else if (line.startsWith("- ")) {
       if (!inList) {
-        html += '<ul>';
+        html += "<ul>";
         inList = true;
       }
       const listItem = line.substring(2);
       // Process bold text and links in list items
       const processedItem = listItem
-        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
         .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>');
       html += `<li>${processedItem}</li>\n`;
     }
     // Project/Job titles with tech stack
-    else if (line.match(/^###?\s+.*/) && lines[i + 1] && lines[i + 1].startsWith('**') && lines[i + 1].includes(',')) {
+    else if (
+      line.match(/^###?\s+.*/) &&
+      lines[i + 1] &&
+      lines[i + 1].startsWith("**") &&
+      lines[i + 1].includes(",")
+    ) {
       if (inList) {
-        html += '</ul>';
+        html += "</ul>";
         inList = false;
       }
-      const title = line.replace(/^###?\s+/, '');
-      const techStack = lines[i + 1].replace(/^\*\*(.*)\*\*$/, '$1');
+      const title = line.replace(/^###?\s+/, "");
+      const techStack = lines[i + 1].replace(/^\*\*(.*)\*\*$/, "$1");
       html += `<div class="project-header">
         <span class="project-title">${title}</span>
         <span class="tech-stack">${techStack}</span>
@@ -423,16 +432,16 @@ function convertMarkdownToHTML(markdown) {
     // Regular paragraphs
     else {
       if (inList) {
-        html += '</ul>';
+        html += "</ul>";
         inList = false;
       }
       // Process bold text and links
       const processedLine = line
-        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
         .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>');
-      
+
       // Special handling for Professional Summary
-      if (currentSection === 'Professional Summary') {
+      if (currentSection === "Professional Summary") {
         html += `<p class="summary">${processedLine}</p>\n`;
       } else {
         html += `<p>${processedLine}</p>\n`;
@@ -442,7 +451,7 @@ function convertMarkdownToHTML(markdown) {
 
   // Close any remaining list
   if (inList) {
-    html += '</ul>';
+    html += "</ul>";
   }
 
   // Special handling for Technical Skills section
@@ -464,11 +473,11 @@ function convertMarkdownToHTML(markdown) {
 if (require.main === module) {
   generatePDF()
     .then(() => {
-      console.log('PDF generation completed successfully!');
+      console.log("PDF generation completed successfully!");
       process.exit(0);
     })
     .catch((error) => {
-      console.error('PDF generation failed:', error);
+      console.error("PDF generation failed:", error);
       process.exit(1);
     });
 }

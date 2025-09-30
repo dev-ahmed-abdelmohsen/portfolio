@@ -39,13 +39,13 @@ const skills = [
   {
     name: "Backend Systems",
     items: ["Node.js", "Java", "Python", "Microservices", "API Design"],
-    icon: "�",
+    icon: "🛠GenCare - Pregnancy Care Mobile Application️",
     color: "from-orange-500 to-red-600",
   },
   {
     name: "Database & Storage",
     items: ["MongoDB", "MS SQL Server", "MySQL", "Redis", "Database Design"],
-    icon: "�️",
+    icon: "🗄️",
     color: "from-indigo-500 to-purple-600",
   },
   {

@@ -44,7 +44,7 @@ Results-driven Software Engineer with 3+ years of experience developing scalable
 - Built dark/light mode support with automatic preference detection
 - Optimized for performance with 97 Google PageSpeed score
 
-### GenCare - Pregnancy Care Application
+### GenCare - Pregnancy Care Mobile Application
 
 **Technologies:** React Native, Expo, Node.js, Express, MongoDB, AWS, Machine Learning
 
@@ -64,7 +64,7 @@ Results-driven Software Engineer with 3+ years of experience developing scalable
 - Created secure authentication with role-based access for administrators and customers
 - Built RTL support for Arabic-speaking markets, increasing regional sales by 35%
 
-### Mawa - Student Housing Platform
+### Mawa - Student Housing Web Platform
 
 **Technologies:** Next.js 15, React 19, TypeScript, Node.js, MongoDB, Leaflet Maps
 

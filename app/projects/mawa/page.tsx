@@ -33,7 +33,7 @@ export default function MawaProjectPage() {
               Startup Idea
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-              Mawa - Student Housing Platform
+              Mawa - Student Housing Web Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-2xl">
               Connecting property owners with student tenants through an
@@ -55,8 +55,8 @@ export default function MawaProjectPage() {
             <h2 className="text-3xl font-bold mb-6 text-white">Overview</h2>
             <div className="prose prose-lg prose-invert max-w-none text-white">
               <p>
-                Mawa is a comprehensive student housing platform startup idea
-                that bridges the gap between property owners and student
+                Mawa is a comprehensive Student Housing Web Platform startup
+                idea that bridges the gap between property owners and student
                 tenants. The platform provides a streamlined marketplace
                 specifically designed for the unique needs of the student
                 housing market.

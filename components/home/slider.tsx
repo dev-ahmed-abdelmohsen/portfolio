@@ -36,7 +36,7 @@ const projects: Project[] = [
   // },
   {
     id: 1,
-    title: "GenCare - Pregnancy Care Application",
+    title: "GenCare - Pregnancy Care Mobile Application",
     description:
       "Comprehensive mobile application supporting expecting mothers with personalized health tracking, pregnancy information, and AI-powered ultrasound analysis for disease detection.",
     image: "/projects/gencare.png",
@@ -47,7 +47,7 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Mawa - Student Housing Platform",
+    title: "Mawa - Student Housing Web Platform",
     description:
       "Comprehensive student housing management system connecting property owners with student tenants. Features map-based property search, multi-role interfaces, and RTL support for Arabic markets.",
     image: "/projects/mawa1.png",
@@ -55,6 +55,17 @@ const projects: Project[] = [
     link: "https://mawa-rho.tech/map/",
     caseStudyUrl: "/projects/mawa",
     category: "Platform",
+  },
+  {
+    id: 3,
+    title: "Business Management Platform for a Startup",
+    description:
+      "Developed a comprehensive business management system from scratch for a non-technical client. Started with an MVP to track expenses, revenue, and inventory, then established a full CI/CD pipeline using Terraform and Ansible for rapid and reliable feature deployment. The system is now live with active users.",
+    image: "/projects/task-app.jpg",
+    tags: ["Full-Stack", "DevOps", "CI/CD", "Terraform", "Ansible", "SQL"],
+    link: "#",
+    caseStudyUrl: "/projects/business-system",
+    category: "Business Platform",
   },
 ];
 
