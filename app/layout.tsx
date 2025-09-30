@@ -9,10 +9,10 @@ export const metadata: Metadata = {
     template: "%s | Ahmed Abd Elmohsen",
   },
   description:
-    "Software Engineer specializing in backend development and DevOps practices",
+    "Software Engineer specializing in fullstack development and DevOps practices",
   keywords: [
     "Software Engineer",
-    "Backend Developer",
+    "fullstack Developer",
     "DevOps",
     "Node.js",
     "React",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     url: "https://ahmed-abd-elmohsen.tech",
     title: "Ahmed Abd Elmohsen - Portfolio",
     description:
-      "Software Engineer specializing in backend development and DevOps practices",
+      "Software Engineer specializing in fullstack development and DevOps practices",
     siteName: "Ahmed Abd Elmohsen Portfolio",
     images: [
       {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ahmed Abd Elmohsen - Portfolio",
     description:
-      "Software Engineer specializing in backend development and DevOps practices",
+      "Software Engineer specializing in fullstack development and DevOps practices",
     images: ["/og-image.jpg"],
   },
   alternates: {

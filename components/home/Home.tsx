@@ -13,40 +13,46 @@ import Image from "next/image";
 
 const skills = [
   {
-    name: "DevOps",
-    items: ["AWS", "Networking", "Linux", "Docker", "Docker Compose"],
-    icon: "⚙️",
+    name: "Web Development",
+    items: ["React", "Next.js", "TypeScript", "Node.js", "REST APIs"],
+    icon: "🌐",
+    color: "from-blue-500 to-cyan-600",
+  },
+  {
+    name: "Mobile Development",
+    items: [
+      "React Native",
+      "Expo",
+      "Cross-platform",
+      "Mobile UI/UX",
+      "App Store",
+    ],
+    icon: "📱",
+    color: "from-purple-500 to-pink-600",
+  },
+  {
+    name: "DevOps & Cloud",
+    items: ["AWS", "Docker", "Jenkins", "GitHub Actions", "CI/CD"],
+    icon: "☁️",
     color: "from-green-500 to-teal-600",
   },
   {
-    name: "Automation & IaC",
-    items: ["Jenkins", "Travis", "GitHub Actions", "Terraform", "Ansible"],
-    icon: "⚙️",
-    color: "from-green-500 to-teal-600",
-  },
-  {
-    name: "Backend",
-    items: ["Node.js", "Java", "Python", "Flask", "REST APIs"],
-    icon: "🔧",
-    color: "from-blue-500 to-purple-600",
-  },
-  {
-    name: "Database",
-    items: ["MongoDB", "MS SQL Server", "MySQL", "Database Design"],
-    icon: "🗄️",
+    name: "Backend Systems",
+    items: ["Node.js", "Java", "Python", "Microservices", "API Design"],
+    icon: "�",
     color: "from-orange-500 to-red-600",
   },
   {
-    name: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-    icon: "💻",
-    color: "from-cyan-500 to-blue-600",
+    name: "Database & Storage",
+    items: ["MongoDB", "MS SQL Server", "MySQL", "Redis", "Database Design"],
+    icon: "�️",
+    color: "from-indigo-500 to-purple-600",
   },
   {
-    name: "Mobile",
-    items: ["React Native", "Expo", "Mobile UI/UX", "Cross-platform"],
-    icon: "📱",
-    color: "from-purple-500 to-pink-600",
+    name: "Infrastructure",
+    items: ["Linux", "Networking", "Terraform", "Ansible", "Monitoring"],
+    icon: "⚙️",
+    color: "from-gray-600 to-slate-700",
   },
 ];
 
@@ -167,7 +173,7 @@ export default function Home() {
               Software Engineer
             </h2>
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              {["Backend Developer", "DevOps Engineer", "Problem Solver"].map(
+              {["Web Developer", "Mobile Developer", "DevOps Engineer"].map(
                 (tag) => (
                   <span
                     key={tag}
@@ -188,9 +194,10 @@ export default function Home() {
               willChange: shouldReduceMotion ? "auto" : "transform, opacity",
             }}
           >
-            I build robust, scalable, and efficient applications using
-            cutting-edge technologies. Specializing in backend development and
-            cloud infrastructure.
+            I build robust web and mobile applications with seamless DevOps
+            integration using cutting-edge technologies. Specializing in
+            responsive web development, cross-platform mobile solutions, and
+            automated deployment pipelines.
           </motion.p>
         </motion.div>
 
@@ -326,25 +333,26 @@ export default function Home() {
                 <span className="bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">
                   Ahmed Abd Elmohsen
                 </span>
-                , a passionate Software Engineer
+                , a passionate Web & Mobile Developer
               </h3>
               <div className="space-y-3 text-gray-600 text-sm sm:text-base leading-relaxed text-center lg:text-left">
                 <p>
                   With over 3 years of hands-on experience in software
-                  development, I specialize in building robust backend systems
-                  and scalable cloud infrastructure that power modern
-                  applications.
+                  development, I specialize in building robust web and mobile
+                  applications with seamless DevOps integration that power
+                  modern digital experiences.
                 </p>
                 <p>
-                  My expertise spans across backend development, DevOps
-                  practices, and cloud technologies. I'm passionate about
-                  writing clean, efficient code and implementing best practices
-                  in software architecture.
+                  My expertise spans across fullstack web development, mobile
+                  app development, and DevOps practices. I'm passionate about
+                  creating responsive web applications, cross-platform mobile
+                  solutions, and implementing automated deployment pipelines.
                 </p>
                 <p>
                   I've successfully delivered 15+ projects ranging from
-                  e-commerce platforms to healthcare applications, always
-                  focusing on performance, security, and user experience.
+                  responsive web applications to cross-platform mobile apps,
+                  always focusing on performance, user experience, and automated
+                  deployment workflows.
                 </p>
               </div>
 
@@ -470,8 +478,8 @@ export default function Home() {
             <div className="w-24 h-1 bg-gradient-to-r from-teal-400 to-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Here are some of the projects I've worked on recently. Each
-              project showcases my skills in DevOps, backend development, and
-              cloud infrastructure.
+              project showcases my skills in web development, mobile
+              applications, and DevOps automation.
             </p>
           </motion.div>
 
