@@ -10,14 +10,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ahmed Abd Elmohsen | Software Engineer Portfolio",
     description: "Professional portfolio showcasing my work as a Software Engineer with expertise in backend development and DevOps practices.",
-    url: "https://ahmed-abd-elmohsen.vercel.app",
+    url: "https://ahmed-abd-elmohsen.tech",
   },
   twitter: {
     title: "Ahmed Abd Elmohsen | Software Engineer Portfolio",
     description: "Professional portfolio showcasing my work as a Software Engineer with expertise in backend development and DevOps practices.",
   },
   alternates: {
-    canonical: "https://ahmed-abd-elmohsen.vercel.app",
+    canonical: "https://ahmed-abd-elmohsen.tech",
   },
 };
 
@@ -25,8 +25,8 @@ export default function Home() {
   return (
     <main>
       <SchemaOrg 
-        url="https://ahmed-abd-elmohsen.vercel.app"
-        title="Ahmed Abd Elmohsen | Software Engineer"
+        url="https://ahmed-abd-elmohsen.tech"
+        title="Ahmed Abd Elmohsen"
         description="Professional portfolio showcasing my work as a Software Engineer with expertise in backend development and DevOps practices."
       />
       <Navbar />

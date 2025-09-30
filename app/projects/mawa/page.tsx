@@ -123,7 +123,7 @@ export default function MawaProjectPage() {
                 <h4 className="text-sm font-medium text-gray-400">Links</h4>
                 <div className="flex space-x-4 mt-2">
                   <a
-                    href="https://mawa-rho.vercel.app/map/"
+                    href="https://mawa-rho.tech/map/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg transition-colors"

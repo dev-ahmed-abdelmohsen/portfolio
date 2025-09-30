@@ -5,7 +5,7 @@ import { MetadataRoute } from "next";
  * This follows the Sitemap Protocol standards: https://www.sitemaps.org/protocol.html
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://ahmed-abd-elmohsen.vercel.app";
+  const baseUrl = "https://ahmed-abd-elmohsen.tech";
   const currentDate = new Date();
 
   // Main pages with high priority

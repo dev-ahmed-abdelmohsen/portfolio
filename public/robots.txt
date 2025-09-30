@@ -1,4 +1,4 @@
-# robots.txt for https://ahmed-abd-elmohsen.vercel.app
+# robots.txt for https://ahmed-abd-elmohsen.tech
 # Last updated: September 12, 2025
 #
 # This file works together with Next.js app/robots.ts to provide
@@ -56,7 +56,7 @@ Disallow: /admin/
 Crawl-delay: 1
 
 # Site maps - Next.js automatically serves the sitemap.xml generated from app/sitemap.ts
-Sitemap: https://ahmed-abd-elmohsen.vercel.app/sitemap.xml
+Sitemap: https://ahmed-abd-elmohsen.tech/sitemap.xml
 
 # Host directive helps specify the preferred domain version
-Host: https://ahmed-abd-elmohsen.vercel.app
+Host: https://ahmed-abd-elmohsen.tech

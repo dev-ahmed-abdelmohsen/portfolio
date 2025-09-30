@@ -14,6 +14,7 @@ A comprehensive, modern portfolio website built with Next.js, TypeScript, and Ta
 ## 🛠 Technical Stack
 
 ### Frontend
+
 - **Framework**: Next.js 14 with App Router
 - **Language**: TypeScript for type safety
 - **Styling**: TailwindCSS with custom design system
@@ -21,6 +22,7 @@ A comprehensive, modern portfolio website built with Next.js, TypeScript, and Ta
 - **Icons**: Heroicons and custom SVG icons
 
 ### Backend & Infrastructure
+
 - **API Routes**: Next.js API routes for server-side functionality
 - **Database**: Mongodb for production data
 - **File Storage**: AWS S3 for media and document storage
@@ -28,6 +30,7 @@ A comprehensive, modern portfolio website built with Next.js, TypeScript, and Ta
 - **Monitoring**: Vercel Analytics and Google Analytics
 
 ### Resume System
+
 - **PDF Generation**: Puppeteer for high-quality PDF creation
 - **ATS Optimization**: Multiple format generation for maximum compatibility
 - **SEO Integration**: Structured data and meta optimization
@@ -44,11 +47,13 @@ A comprehensive, modern portfolio website built with Next.js, TypeScript, and Ta
 ## 🎨 Design System
 
 ### Color Palette
+
 - **Primary**: Blue gradient (#1e3a8a to #3b82f6)
 - **Secondary**: Slate tones for professional appearance
 - **Accent**: Emerald for success states and highlights
 
 ### Typography
+
 - **Headings**: Inter font family for modern appearance
 - **Body**: System fonts for optimal readability
 - **Code**: JetBrains Mono for technical content
@@ -56,6 +61,7 @@ A comprehensive, modern portfolio website built with Next.js, TypeScript, and Ta
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js 18+ and npm/yarn
 - Git for version control
 
@@ -84,11 +90,13 @@ npm run build
 The portfolio includes a comprehensive resume system with multiple formats:
 
 ### Available Formats
+
 1. **PDF Resume** (`/public/resume.pdf`) - For email attachments and formal applications
 2. **ATS HTML** (`/public/ats-resume.html`) - For online applications and ATS systems
 3. **Plain Text** (`/public/ats-resume.txt`) - For job board forms and maximum compatibility
 
 ### Features
+
 - ✅ ATS keyword optimization
 - ✅ Professional formatting
 - ✅ Quantified achievements
@@ -99,18 +107,23 @@ The portfolio includes a comprehensive resume system with multiple formats:
 ## 🔧 Customization Guide
 
 ### Personal Information
+
 Update the following files with your information:
+
 - `utils/seoKeywords.ts` - SEO and professional keywords
 - `app/resume/page.tsx` - Resume content and contact information
 - `utils/generate-pdf.js` - Professional resume data
 
 ### Projects
+
 Add your projects in the project showcase:
+
 - Update project data with your actual work
 - Add project images to `/public/projects/`
 - Include detailed case studies and metrics
 
 ### Styling & Branding
+
 - Modify color scheme in `tailwind.config.js`
 - Update fonts and typography in `app/layout.tsx`
 - Customize animations in component files
@@ -125,6 +138,7 @@ Add your projects in the project showcase:
 ## 🌐 Deployment
 
 ### Vercel (Recommended)
+
 ```bash
 # Connect to Vercel
 npx vercel
@@ -134,6 +148,7 @@ npx vercel --prod
 ```
 
 ### Alternative Platforms
+
 - **Netlify**: Full Next.js support
 - **AWS Amplify**: Enterprise deployment
 - **Digital Ocean**: Custom server deployment
@@ -143,7 +158,7 @@ npx vercel --prod
 - **Email**: ahmed.abdelmohsen@email.com
 - **LinkedIn**: [Ahmed Abd Elmohsen](https://www.linkedin.com/in/dev-ahmed-abdelmohsen/)
 - **GitHub**: [ahmed-abdelmohsen](https://github.com/dev-ahmed-abdelmohsen)
-- **Portfolio**: [Live Demo](https://ahmed-abd-elmohsen.vercel.app/)
+- **Portfolio**: [Live Demo](https://ahmed-abd-elmohsen.tech/)
 
 ## 📄 License
 
@@ -151,4 +166,4 @@ This project is licensed under the MIT License - feel free to use it as a templa
 
 ---
 
-*Built with ❤️ using modern web technologies and best practices for professional presentation.*
+_Built with ❤️ using modern web technologies and best practices for professional presentation._

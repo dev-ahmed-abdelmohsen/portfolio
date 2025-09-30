@@ -46,7 +46,7 @@ export default function SchemaOrg({
   url,
   title,
   description,
-  imageUrl = "https://ahmed-abd-elmohsen.vercel.app/profile_3.jpeg",
+  imageUrl = "https://ahmed-abd-elmohsen.tech/profile_3.jpeg",
   datePublished = new Date().toISOString(),
   dateModified = new Date().toISOString(),
   type = "Person",
@@ -59,13 +59,13 @@ export default function SchemaOrg({
       schema = {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        url: "https://ahmed-abd-elmohsen.vercel.app",
+        url: "https://ahmed-abd-elmohsen.tech",
         name: title,
         description: description,
         author: {
           "@type": "Person",
           name: "Ahmed Abd Elmohsen",
-          url: "https://ahmed-abd-elmohsen.vercel.app",
+          url: "https://ahmed-abd-elmohsen.tech",
         },
         potentialAction: {
           "@type": "SearchAction",
@@ -86,7 +86,7 @@ export default function SchemaOrg({
         author: {
           "@type": "Person",
           name: "Ahmed Abd Elmohsen",
-          url: "https://ahmed-abd-elmohsen.vercel.app",
+          url: "https://ahmed-abd-elmohsen.tech",
         },
         datePublished: datePublished,
         dateModified: dateModified,
@@ -102,7 +102,7 @@ export default function SchemaOrg({
         mainEntity: {
           "@type": "Person",
           name: "Ahmed Abd Elmohsen",
-          url: "https://ahmed-abd-elmohsen.vercel.app",
+          url: "https://ahmed-abd-elmohsen.tech",
           image: imageUrl,
           jobTitle: "Software Engineer",
           description: description,

@@ -3,14 +3,25 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ahmed-abd-elmohsen.vercel.app"),
+  metadataBase: new URL("https://ahmed-abd-elmohsen.tech"),
   title: {
     default: "Ahmed Abd Elmohsen - Portfolio",
     template: "%s | Ahmed Abd Elmohsen",
   },
-  description: "Software Engineer specializing in backend development and DevOps practices",
-  keywords: ["Software Engineer", "Backend Developer", "DevOps", "Node.js", "React", "Next.js", "Ahmed Abd Elmohsen"],
-  authors: [{ name: "Ahmed Abd Elmohsen", url: "https://ahmed-abd-elmohsen.vercel.app" }],
+  description:
+    "Software Engineer specializing in backend development and DevOps practices",
+  keywords: [
+    "Software Engineer",
+    "Backend Developer",
+    "DevOps",
+    "Node.js",
+    "React",
+    "Next.js",
+    "Ahmed Abd Elmohsen",
+  ],
+  authors: [
+    { name: "Ahmed Abd Elmohsen", url: "https://ahmed-abd-elmohsen.tech" },
+  ],
   creator: "Ahmed Abd Elmohsen",
   publisher: "Ahmed Abd Elmohsen",
   robots: {
@@ -19,17 +30,18 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ahmed-abd-elmohsen.vercel.app",
+    url: "https://ahmed-abd-elmohsen.tech",
     title: "Ahmed Abd Elmohsen - Portfolio",
-    description: "Software Engineer specializing in backend development and DevOps practices",
+    description:
+      "Software Engineer specializing in backend development and DevOps practices",
     siteName: "Ahmed Abd Elmohsen Portfolio",
     images: [
       {
@@ -43,11 +55,12 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ahmed Abd Elmohsen - Portfolio",
-    description: "Software Engineer specializing in backend development and DevOps practices",
+    description:
+      "Software Engineer specializing in backend development and DevOps practices",
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://ahmed-abd-elmohsen.vercel.app",
+    canonical: "https://ahmed-abd-elmohsen.tech",
   },
   verification: {
     google: "_M7xG8pu4J-Nmb8PGYCF829JndamEAV4ksXjX6nzCjw",
@@ -73,11 +86,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="google-site-verification" content="_M7xG8pu4J-Nmb8PGYCF829JndamEAV4ksXjX6nzCjw" />
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
+        <meta
+          name="google-site-verification"
+          content="_M7xG8pu4J-Nmb8PGYCF829JndamEAV4ksXjX6nzCjw"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"

@@ -16,7 +16,7 @@
 
   <!-- Main Homepage -->
   <url>
-    <loc>https://ahmed-abd-elmohsen.vercel.app/</loc>
+    <loc>https://ahmed-abd-elmohsen.tech/</loc>
     <lastmod>2025-09-12T10:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -24,7 +24,7 @@
 
   <!-- Resume Page -->
   <url>
-    <loc>https://ahmed-abd-elmohsen.vercel.app/resume</loc>
+    <loc>https://ahmed-abd-elmohsen.tech/resume</loc>
     <lastmod>2025-09-12T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -32,77 +32,77 @@
   
   <!-- Projects Pages -->
   <url>
-    <loc>https://ahmed-abd-elmohsen.vercel.app/projects/muslim-azkar-app</loc>
+    <loc>https://ahmed-abd-elmohsen.tech/projects/muslim-azkar-app</loc>
     <lastmod>2023-10-15T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://ahmed-abd-elmohsen.vercel.app/projects/azkar.png</image:loc>
+      <image:loc>https://ahmed-abd-elmohsen.tech/projects/azkar.png</image:loc>
       <image:title>Muslim Azkar Application</image:title>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ahmed-abd-elmohsen.vercel.app/projects/real-state-website</loc>
+    <loc>https://ahmed-abd-elmohsen.tech/projects/real-state-website</loc>
     <lastmod>2023-08-22T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://ahmed-abd-elmohsen.vercel.app/projects/mawa1.png</image:loc>
+      <image:loc>https://ahmed-abd-elmohsen.tech/projects/mawa1.png</image:loc>
       <image:title>Real Estate Marketplace</image:title>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ahmed-abd-elmohsen.vercel.app/projects/e-commerce-website</loc>
+    <loc>https://ahmed-abd-elmohsen.tech/projects/e-commerce-website</loc>
     <lastmod>2023-11-05T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://ahmed-abd-elmohsen.vercel.app/projects/ecommerce.jpg</image:loc>
+      <image:loc>https://ahmed-abd-elmohsen.tech/projects/ecommerce.jpg</image:loc>
       <image:title>E-Commerce Platform</image:title>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ahmed-abd-elmohsen.vercel.app/projects/task-management-app</loc>
+    <loc>https://ahmed-abd-elmohsen.tech/projects/task-management-app</loc>
     <lastmod>2024-01-10T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://ahmed-abd-elmohsen.vercel.app/projects/task-app.jpg</image:loc>
+      <image:loc>https://ahmed-abd-elmohsen.tech/projects/task-app.jpg</image:loc>
       <image:title>Task Management Application</image:title>
     </image:image>
   </url>
 
   <url>
-    <loc>https://ahmed-abd-elmohsen.vercel.app/projects/healthcare-platform</loc>
+    <loc>https://ahmed-abd-elmohsen.tech/projects/healthcare-platform</loc>
     <lastmod>2024-03-18T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://ahmed-abd-elmohsen.vercel.app/projects/gencare.png</image:loc>
+      <image:loc>https://ahmed-abd-elmohsen.tech/projects/gencare.png</image:loc>
       <image:title>Healthcare Management Platform</image:title>
     </image:image>
   </url>
   
   <!-- Additional Pages -->
   <url>
-    <loc>https://ahmed-abd-elmohsen.vercel.app/skills</loc>
+    <loc>https://ahmed-abd-elmohsen.tech/skills</loc>
     <lastmod>2024-06-15T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://ahmed-abd-elmohsen.vercel.app/contact</loc>
+    <loc>https://ahmed-abd-elmohsen.tech/contact</loc>
     <lastmod>2025-09-12T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://ahmed-abd-elmohsen.vercel.app/blog</loc>
+    <loc>https://ahmed-abd-elmohsen.tech/blog</loc>
     <lastmod>2025-09-12T10:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

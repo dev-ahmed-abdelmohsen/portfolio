@@ -5,21 +5,25 @@ This portfolio includes multiple resume formats optimized for different purposes
 ## Available Resume Formats
 
 ### 1. **Markdown Resume** (`/public/resume.md`)
+
 - **Purpose**: Source file for web display
 - **Best for**: Website integration and easy editing
 - **Features**: Clean formatting with proper structure for ATS parsing
 
 ### 2. **PDF Resume** (`/public/resume.pdf`)
+
 - **Purpose**: Formal applications and human review
 - **Best for**: Email attachments and formal submissions
 - **Features**: Professional formatting, printable, widely accepted
 
 ### 3. **ATS HTML Resume** (`/public/ats-resume.html`)
+
 - **Purpose**: ATS-optimized web version
 - **Best for**: Online applications and ATS systems
 - **Features**: Clean HTML structure, keyword optimization, proper heading hierarchy
 
 ### 4. **Text Resume** (`/public/ats-resume.txt`)
+
 - **Purpose**: Plain text for maximum ATS compatibility
 - **Best for**: Online job boards, ATS systems, copying into forms
 - **Features**: No formatting, keywords optimized, easy parsing
@@ -32,11 +36,12 @@ This portfolio includes multiple resume formats optimized for different purposes
 ✅ **Technical Depth**: Demonstrates expertise in specific technologies  
 ✅ **Clear Structure**: Proper heading hierarchy (H1, H2, H3)  
 ✅ **Standard Sections**: Professional Summary, Experience, Skills, Education  
-✅ **Clean Formatting**: No complex layouts or graphics that confuse ATS  
+✅ **Clean Formatting**: No complex layouts or graphics that confuse ATS
 
 ## Job Application Strategy
 
 ### For Software Engineering Positions:
+
 1. **Customize for each application**: Adjust project emphasis based on job requirements
 2. **Match keywords**: Align your resume keywords with the job description
 3. **Highlight relevant projects**: Put most relevant projects first
@@ -44,6 +49,7 @@ This portfolio includes multiple resume formats optimized for different purposes
 5. **Show technical depth**: Demonstrate expertise in required technologies
 
 ### For Different Types of Companies:
+
 - **Startups**: Emphasize versatility and full-stack capabilities
 - **Enterprise**: Focus on scalability and proven architecture experience
 - **Product Companies**: Highlight user-centric development and UX
@@ -59,10 +65,11 @@ This portfolio includes multiple resume formats optimized for different purposes
 ## Contact Information
 
 Always ensure your contact information is current:
+
 - Email: ashams3719262@gmail.com
 - LinkedIn: https://www.linkedin.com/in/dev-ahmed-abdelmohsen/
 - GitHub: https://github.com/dev-ahmed-abdelmohsen
-- Portfolio: ahmed-abd-elmohsen.vercel.app
+- Portfolio: ahmed-abd-elmohsen.tech
 
 ## ATS Scoring Optimization
 
@@ -75,4 +82,4 @@ Always ensure your contact information is current:
 
 ---
 
-*This resume is designed to pass through ATS systems while maintaining professional appearance for human reviewers.*
+_This resume is designed to pass through ATS systems while maintaining professional appearance for human reviewers._

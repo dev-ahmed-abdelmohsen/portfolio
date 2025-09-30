@@ -5,7 +5,7 @@ import { MetadataRoute } from "next";
  * This follows the standards outlined at https://developers.google.com/search/docs/advanced/robots/create-robots-txt
  */
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://ahmed-abd-elmohsen.vercel.app";
+  const baseUrl = "https://ahmed-abd-elmohsen.tech";
 
   return {
     // Define rules for all web crawlers

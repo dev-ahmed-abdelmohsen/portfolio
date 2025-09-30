@@ -44,7 +44,7 @@ const SEO = ({
   noindex = false,
 }: SEOProps) => {
   const pathname = usePathname();
-  const siteUrl = "https://ahmed-abd-elmohsen.vercel.app";
+  const siteUrl = "https://ahmed-abd-elmohsen.tech";
   const fullUrl = canonicalUrl || `${siteUrl}${pathname}`;
   const fullOgImage = ogImage.startsWith("http")
     ? ogImage

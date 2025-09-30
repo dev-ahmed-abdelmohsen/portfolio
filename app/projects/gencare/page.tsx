@@ -136,7 +136,7 @@ export default function GencareProjectPage() {
                     <span>Source Code</span>
                   </a>
                   <a
-                    href="https://gen-care-website.vercel.app/"
+                    href="https://gen-care-website.tech/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
